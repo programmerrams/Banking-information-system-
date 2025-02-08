@@ -1,0 +1,66 @@
+
+/*****************************************************
+ general settings
+******************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(170, 170, 254);
+}
+
+
+
+/*****************************************************
+ menu navigation settings
+******************************************************/
+
+.nav-menu {
+  font-size: 2.5rem;
+  margin: 4rem 2rem; 
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap:2rem;
+}
+
+.nav-list li:last-child {
+  margin: auto;
+}
+
+/*****************************************************
+ bank info section
+******************************************************/
+
+.first-statement {
+  text-align:center;
+}
+
+.business-pic {
+  height: 80vh;
+  text-align:center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*****************************************************
+ footer section
+******************************************************/
+.second-nav-list {
+  list-style-type: none;
+  font-size: 1rem;
+  display: flex;
+  gap: auto;
+}
