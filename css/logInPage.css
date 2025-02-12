@@ -1,5 +1,6 @@
-
-
+/* ################################################################ */
+/* general settings */
+/* ################################################################ */
 
 * {
   margin: 0;
@@ -7,12 +8,23 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: gold;
+}
 
-
+/* ################################################################ */
+/* Log in section */
+/* ################################################################ */
 .Log-section {
   display:flex;
   flex-direction: column;
-  width:100vw;
-  margin: 0 2rem;
+  width:30vw;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+input {
+  margin: 2rem;
+  font-size: 2rem;
 }
 
