@@ -7,53 +7,88 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-  background-color: rgb(170, 170, 254);
+  background-color: rgb(98, 98, 224);
 }
 
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+}
 
+li a:hover {
+  background-color: orangered;
+}
 
+li a:active {
+  background-color: red;
+}
+
+.active {
+  background-color: orangered;
+}
 /*****************************************************
  menu navigation settings
 ******************************************************/
 
 .nav-menu {
-  font-size: 2.5rem;
-  margin: 4rem 2rem; 
-}
-
-a {
-  text-decoration: none;
+  font-size: 20px;
+  margin: 0;
 }
 
 .nav-list {
   list-style-type: none;
+  margin: 10px;
+  padding: 0;
+  background-color: #111;
   display: flex;
-  gap:2rem;
 }
 
-.nav-list li:last-child {
-  margin: auto;
+.nav-list li {
+  border: solid white;
+} 
+
+.login-right-align {
+  margin-left: auto;
+}
+
+.active {
+  background-color: orchid;
 }
 
 /*****************************************************
  bank info section
 ******************************************************/
 
+.bank-section {
+  position: relative;
+  text-align: center;
+}
+
 .first-statement {
-  text-align:center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .business-pic {
-  height: 80vh;
+  height: 70vh;
   text-align:center;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  opacity: 0.5;
 }
 
 /*****************************************************
@@ -61,7 +96,21 @@ a {
 ******************************************************/
 .second-nav-list {
   list-style-type: none;
-  font-size: 1rem;
+  background-color: #111;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
   display: flex;
-  gap: auto;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
 }
+
+.second-nav-list li {
+  border: solid white;
+}
+
+
+
