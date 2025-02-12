@@ -7,6 +7,33 @@
   color: black;
 }
 /* ################################################## */
+/* menu section */
+/* ################################################## */
+
+
+.nav-menu {
+    font-size: 2.5rem;
+    margin: 4rem 2rem; 
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+    gap:2rem;
+  }
+  
+  .nav-list li:last-child {
+    margin: auto;
+  }
+  
+
+
+
+/* ################################################## */
 /* registeration section */
 /* ################################################## */
 
