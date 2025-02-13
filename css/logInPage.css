@@ -105,6 +105,12 @@ input {
   cursor: pointer;
 }
 
+.login-btn:hover {
+  color: black;
+  transition: all 0.3s ease-in-out 0s;
+  border-radius: 25px;
+}
+
 /********************************************
 Footer
 /******************************************/
