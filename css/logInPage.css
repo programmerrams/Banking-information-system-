@@ -37,10 +37,6 @@ body {
   border: solid white;
 } 
 
-.login-right-align {
-  margin-left: auto;
-}
-
 .active {
   background-color: orchid;
 }
@@ -50,10 +46,24 @@ body {
 /* ################################################################ */
 .Log-section {
   display:flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width:30vw;
+  width: 430px;
+  background-color: brown;
+  padding: 40px 30px;
+  color: white;
+  border-radius: 25px;
+  border: 5px solid rgb(0, 0, 0);
+  box-shadow: 0 0 10px black;
   margin: auto;
   margin-top: 5rem;
+}
+
+.Log-section h2 {
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 input {
@@ -61,3 +71,13 @@ input {
   font-size: 2rem;
 }
 
+/* top, right, bottom, left */
+
+.login-btn {
+  margin: 2rem;
+  font-size: 2rem;
+  background-color: rgb(18, 21, 192);
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
