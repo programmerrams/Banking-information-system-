@@ -24,6 +24,8 @@ li a {
 
 li a:hover {
   background-color: orangered;
+  transition: all 0.5s ease-in-out;
+  color: black;
 }
 
 li a:active {
