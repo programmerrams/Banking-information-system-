@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: rgb(98, 98, 224);
+  background-color: rgb(38, 38, 41);
 }
 
 li a {
@@ -44,7 +44,7 @@ li a:active {
 
 .nav-list {
   list-style-type: none;
-  margin: 10px;
+  margin: 0;
   padding: 0;
   background-color: #111;
   display: flex;
@@ -59,7 +59,7 @@ li a:active {
 }
 
 .active {
-  background-color: orchid;
+  background-color: royalblue;
 }
 
 /*****************************************************
@@ -82,12 +82,12 @@ li a:active {
 }
 
 .business-pic {
-  height: 70vh;
+  height: auto;
   text-align:center;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
   opacity: 0.5;
 }
 
