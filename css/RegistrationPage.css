@@ -4,14 +4,22 @@
 
 * {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: black;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(98, 98, 224);
+  background-color:  rgb(38, 38, 41);
+}
+
+label {
+  color: white;
+}
+
+h1 {
+  color: white;
+  text-align: center;
 }
 
 li a {
@@ -36,7 +44,7 @@ li a:hover {
 
 .nav-list {
   list-style-type: none;
-  margin: 10px;
+  margin: 0;
   padding: 0;
   background-color: #111;
   display: flex;
@@ -50,7 +58,7 @@ li a:hover {
   margin-left: auto;
 }
 .active {
-  background-color: orchid;
+  background-color: royalblue;
 }
 
 .second-nav-list {
@@ -79,22 +87,26 @@ li a:hover {
   display: flex;
   flex-direction: column;
   width: fit-content;
+  padding: 20px;
+  margin: auto;
 }
 
 .register-btn {
   background-color: royalblue;
-  color: black;
+  color: white;
   padding: 7px 7px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
-  margin: 0px 15px;
+  margin: 0px 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .register-btn:hover {
   background-color: orangered;
-  color: black;
+  color: white;
 }
 
 .info-box {
