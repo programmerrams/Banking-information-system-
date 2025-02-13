@@ -6,14 +6,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-  background-color: gold;
+  background-color: rgb(38, 38, 41);
 }
 
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+}
 
+li a:hover {
+  background-color: orangered;
+  transition: all 0.5s ease-in-out;
+  color: black;
+}
+
+li a:active {
+  background-color: red;
+}
+
+.active {
+  background-color: orangered;
+}
 
 /* ################################################################ */
 /* menu settings */
@@ -27,9 +47,9 @@ body {
 
 .nav-list {
   list-style-type: none;
-  margin: 10px;
+  margin: 0;
   padding: 0;
-  /* background-color: #111; */
+  background-color: #111;
   display: flex;
 }
 
@@ -37,8 +57,12 @@ body {
   border: solid white;
 } 
 
+.login-right-align {
+  margin-left: auto;
+}
+
 .active {
-  background-color: orchid;
+  background-color: royalblue;
 }
 
 /* ################################################################ */
@@ -80,4 +104,25 @@ input {
   color: white;
   padding: 1rem;
   cursor: pointer;
+}
+
+/********************************************
+Footer
+/******************************************/
+.second-nav-list {
+  list-style-type: none;
+  background-color: #111;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.second-nav-list li {
+  border: solid white;
 }
