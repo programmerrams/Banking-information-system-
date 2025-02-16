@@ -1,8 +1,6 @@
-
 /*****************************************************
- general settings
+  General Settings
 ******************************************************/
-
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +9,7 @@
 }
 
 body {
-  background-color: rgb(38, 38, 41);
+  background-color: black;
 }
 
 li a {
@@ -23,22 +21,17 @@ li a {
 }
 
 li a:hover {
-  background-color: orangered;
-  transition: all 0.5s ease-in-out;
+  background-color: blueviolet;
+  transition: all 0.4s ease-in-out;
   color: black;
 }
 
-li a:active {
-  background-color: red;
-}
-
 .active {
-  background-color: orangered;
+  background-color: slateblue;
 }
 /*****************************************************
- menu navigation settings
+  Menu Navigation Settings
 ******************************************************/
-
 .nav-menu {
   font-size: 20px;
   margin: 0;
@@ -48,7 +41,7 @@ li a:active {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #111;
+  background-color: black;
   display: flex;
 }
 
@@ -63,11 +56,9 @@ li a:active {
 .active {
   background-color: royalblue;
 }
-
 /*****************************************************
- bank info section
+  Bank Information Section
 ******************************************************/
-
 .bank-section {
   position: relative;
   text-align: center;
@@ -84,23 +75,20 @@ li a:active {
 }
 
 .business-pic {
-  height: auto;
-  text-align:center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
-  opacity: 0.5;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/business.jpg);
+  background-size: cover;
+  background-position: center;
 }
-
 /*****************************************************
- footer section
+  Footer Section
 ******************************************************/
 .second-nav-list {
   list-style-type: none;
-  background-color: #111;
+  background-color: black;
   text-align: center;
-  padding: 10px 0;
+  padding: 0 10px;
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -113,6 +101,3 @@ li a:active {
 .second-nav-list li {
   border: solid white;
 }
-
-
-
