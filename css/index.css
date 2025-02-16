@@ -22,19 +22,6 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
-  background-color: orangered;
-  transition: all 0.5s ease-in-out;
-  color: black;
-}
-
-li a:active {
-  background-color: red;
-}
-
-.active {
-  background-color: orangered;
-}
 /*****************************************************
  menu navigation settings
 ******************************************************/
@@ -96,7 +83,7 @@ li a:active {
 /*****************************************************
  footer section
 ******************************************************/
-.second-nav-list {
+.second-nav-menu {
   list-style-type: none;
   background-color: #111;
   text-align: center;
@@ -104,15 +91,60 @@ li a:active {
   font-size: 20px;
   display: flex;
   justify-content: center;
-  position: fixed;
+  align-items: center;
+  position: relative;
   bottom: 0;
   width: 100%;
-  margin: 0;
+  height: 50px;
 }
 
-.second-nav-list li {
-  border: solid white;
+.second-nav-menu a {
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 1000;
+  color: white;
+  text-decoration: none;
+  padding: 0 25px;
+  z-index: 1;
 }
 
+.second-nav-menu a:hover {
+  color: black;
+  transition: all 0.3s ease-in-out 0s;
+}
 
+.second-nav-menu span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95px;
+  height: 100%;
+  background: linear-gradient(45deg, #ff0000, #ff7300);
+  border-radius: 8px;
+  transition: 0.5s;
+}
 
+.second-nav-menu a:nth-child(1):hover~span {
+  left: 0;
+}
+
+.second-nav-menu a:nth-child(2):hover~span {
+  left: 400px;
+  width: 95px;
+}
+
+.second-nav-menu a:nth-child(3):hover~span {
+  left: 530px;
+  width: 200px;
+}
+
+.second-nav-menu a:nth-child(4):hover~span {
+  left: 770px;
+  width: 180px;
+}
+
+.second-nav-menu a:nth-child(5):hover~span {
+  left: 990px;
+  width: 110px;
+} 
