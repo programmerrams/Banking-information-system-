@@ -1,15 +1,20 @@
 Template:
-*Descriptive Name* (Must start with a verb)
+_Descriptive Name_ (Must start with a verb)
 As [type of user / user role],
 I want to [perform some task using the info system]
 so that I can [achieve some goal].
-        
+
 Clerk User: (Only input and ouput actions, no processing)
+
 - As a clerk user, I want to be able to view the list of all customers so that I can see who is in the system.
 
 Transactional User: (Processing Action)
+
 - As a transactional user, I want to be able to access my credentials so that I can modify them at any time in the system.
 
 Manager User: (Only output actions, no input or processing actions)
+
 - As a manager user, I want to be able to access a report so that I can view the performance metrics of the bank.
 - As a manager user, I want to be able to approve or reject loan applications so that I can manage the bank's loan portfolio.
+
+link for sql database: https://webdev.slides.com/coltsteele/mysql-c54eff
