@@ -13,19 +13,25 @@
         <li><a href="Index.html">Home</a></li>
         <li><a href="Request Loans.html">Request Loans</a></li>
         <li><a href="Credit Card Page.html">Apply for a Credit Card</a></li>
-        <li class="login-right-align"><a href="Log In Page.html" class="active">Login</a></li>
+        <li class="login-right-align">
+          <a href="Log In Page.html" class="active">Login</a>
+        </li>
         <li><a href="Registration Page.html">Register</a></li>
       </ul>
     </nav>
 
-
-    <section class="Log-section">
+    <form class="Log-section">
       <h2>Login</h2>
-      <label for="username">Username</label>
-      <input class="username-box" type="text" placeholder="username" />
+      <label for="username"> Username</label>
+      <input class="username-box" type="text" placeholder="username" required />
 
       <label for="password">password</label>
-      <input class="password-box" type="password" placeholder="password" />
+      <input
+        class="password-box"
+        type="password"
+        placeholder="password"
+        required
+      />
 
       <div class="remember">
         <label for="check">
@@ -35,8 +41,8 @@
       </div>
 
       <button class="login-btn">Login</button>
-    </section>
-  
+    </form>
+
     <section class="new-user-section">
       <button class="new-user-btn">
         <a href="RegistrationPage.html">New User? Click Here</a>
