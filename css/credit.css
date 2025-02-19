@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 body {
@@ -47,7 +47,7 @@ li a:hover {
 
 .nav-list li {
   border: solid white;
-} 
+}
 
 .login-right-align {
   margin-left: auto;
@@ -73,6 +73,20 @@ form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+}
+
+/* submit button settings */
+
+.submit-btn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  align-content: center;
+  width: 50%;
 }
 /*****************************************************
   Footer Settings
