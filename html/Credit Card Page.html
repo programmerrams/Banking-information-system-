@@ -18,29 +18,29 @@
     </nav>
 
     <section class="basic-info">
-      <form action="">
+      <figure class="basic-info-section">
         <div class="name">
           <h1>What is your name?</h1>
           <label for="">First Name</label>
-          <input type="text" placeholder="John" required />
+          <input type="text" placeholder="John" class = "firstName" required />
           <label for="">Last Name</label>
-          <input type="text" placeholder="Doe" required />
+          <input type="text" placeholder="Doe" required class = "lastName"/>
         </div>
 
         <div class="credit-score-box">
           <h1>What is your credit score?</h1>
           <label for="">Credit Score</label>
-          <input type="number" placeholder="300" min="300" max="850" required />
+          <input type="number" placeholder="300" min="300" max="850" required class = "credit-score" />
         </div>
 
-        <div class="credit-score-box">
+        <div class="salary">
           <h1>What is your annual salary (net income)?</h1>
-          <label for="">Credit Score</label>
-          <input type="number" placeholder="300" min="0" required />
+          <label for="">Annual salary</label>
+          <input type="number" placeholder="300" min="0" required class="salary-amount" />
         </div>
 
         <button class="submit-btn">submit form</button>
-      </form>
+      </figure>
     </section>
 
     <footer>
@@ -51,5 +51,6 @@
         <li><a href="Disclaimers.html">Disclaimers</a></li>
       </ul>
     </footer>
+    <script src="/js/Credit.js"></script>
   </body>
 </html>

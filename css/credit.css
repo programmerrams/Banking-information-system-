@@ -69,7 +69,7 @@ li a:hover {
   width: 24vw;
 }
 
-form {
+.basic-info-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
