@@ -55,7 +55,9 @@ submitBtn.addEventListener("click", function () {
 
   //convert credit limit to a string
   creditLimit = creditLimit.toString();
-  // credit.innerHTML = `Your credit card limit is $${creditLimit}`;
+  console.log(creditLimit)
+  console.log (typeof creditLimit);
+    // credit.innerHTML = `Your credit card limit is $${creditLimit}`;
 
   // If all validations pass
   // alert("Thank you for your submission!");
@@ -67,7 +69,7 @@ submitBtn.addEventListener("click", function () {
   console.log("Last Name:", lastName.value);
 
   localStorage.setItem("credit", JSON.stringify(credit));
-  localStorage.setItem("creditAmount", JSON.stringify(creditLimit));
+  localStorage.setItem("creditAmount", creditLimit);
   localStorage.setItem("Credit Score", JSON.stringify(creditScoreValue));
   localStorage.setItem("firstName", firstName.value);
   localStorage.setItem("lastName", lastName.value);
