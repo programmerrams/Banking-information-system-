@@ -7,6 +7,7 @@ so that I can [achieve some goal].
 Clerk User: (Only input and ouput actions, no processing)
 
 - As a clerk user, I want to be able to view the list of all customers so that I can see who is in the system.
+- as a customer, i want to know the bank products, so that i can apply for the correct product for my needs. 
 
 Transactional User: (Processing Action)
 
@@ -18,3 +19,10 @@ Manager User: (Only output actions, no input or processing actions)
 - As a manager user, I want to be able to approve or reject loan applications so that I can manage the bank's loan portfolio.
 
 link for sql database: https://webdev.slides.com/coltsteele/mysql-c54eff
+
+acceptance criteria:
+Given that [some goal (from the User Story)],
+when [some action is carried out by the user USING THE INFO SYS],
+then [a set of outcomes the user should SEE IN THE INFO SYS].
+
+since the customer wnats to apply for one of our bank products, The user will tells us their income and there credit score so that we can display to them the results on whether they are appoved and the limit of the financial product. 
