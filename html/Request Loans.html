@@ -23,10 +23,18 @@
             <! -- Temporary -- !>
             <form action="">
                 <label for="qone">How much money do you need?</label><br>
-                <input type="text" id="qone" name="qone" value="$5000"><br><br>
+                <input type="text" id="qone" name="qone" placeholder="$5000"><br><br>
                 
         <label for="qtwo">How long will you need this money for?</label>
-        <input type="time" id="qtwo" name="qtwo" value="1 year"><br><br>
+        <select name="loan-length" id="loan-length">
+          <option value="">select years</option>
+          <option value="one year">1 years</option>
+          <option value="five years">5 years</option>
+          <option value="ten years">10 years</option>
+          <option value="fifteen years">15 years</option>
+          <option value="twenty years">20 years</option>
+          <option value="thirty years">30 years</option>
+        </select>
 
         <p>Reason for loan</p>
         <br>
