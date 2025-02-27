@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bank Account access</title>
-  <link rel="stylesheet" href="/css/accounts.css">
-</head>
-<body>
-  <section class = "checkings-account">
-    <h1>Checkings Account</h1>
-    <p>Account Number: #</p>
-    <p>Balance: $1000.00</p>
-  </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Account access</title>
+    <link rel="stylesheet" href="/css/accounts.css" />
+    <link rel="stylesheet" href="/css/navigation.css" />
+  </head>
+  <body>
+    <nav class="nav-menu">
+      <ul class="nav-list">
+        <li><a href="Index.html" class="active">Home</a></li>
+        <li><a href="Request Loans.html">Request Loans</a></li>
+        <li><a href="Credit Card Page.html">Apply for a Credit Card</a></li>
+        <li><a href="Accounts.html">Manage accounts</a></li>
+        <li class="login"><a href="Log In Page.html">Login</a></li>
+        <li><a href="Registration Page.html">Register</a></li>
+      </ul>
+    </nav>
+    <h1 class="greeting">hello User</h1>
+    <figure class="all-accounts">
+      <section class="checkings-account">
+        <h1>Checkings Account</h1>
+        <p>Account Number: #</p>
+        <p class="checking-account-balance">Balance: $1000.00</p>
+      </section>
 
-  <section class = "savings-account">
-    <h1>Savings Account</h1>
-    <p>Account Number: #</p>
-    <p>Balance: $5000.00</p>
-  </section>
+      <section class="savings-account">
+        <h1>Savings Account</h1>
+        <p>Account Number: #</p>
+        <p class="saving-account-balance">Balance: $5000.00</p>
+      </section>
 
-  <section class = "credit-card-account">
-    <h1>Credit Card Account</h1>
-    <p>Account Number: #</p>
-    <p>Balance: $1000.00</p>
-  </section>
-</body>
+      <section class="credit-card-account">
+        <h1>Credit Card Account</h1>
+        <p>Account Number: #</p>
+        <p class="credit-card-account">Balance: $1000.00</p>
+      </section>
+
+      <section class="all-buttons">
+        <button class="deposit">Deposits</button>
+        <button class="withdraw">withdrew</button>
+      </section>
+    </figure>
+    <figure class="account-actions">
+      <h1>account would you like to work with</h1>
+      <select>
+        <option value="checkings">Checkings Account</option>
+        <option value="savings">Savings Account</option>
+        <option value="credit-card">Credit Card Account</option>
+      </select>
+
+      <button class="submit">Submit</button>
+      <button class="hide">hide setting</button>
+    </figure>
+    <footer>
+      <ul class="second-nav-list">
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="Questions and Answers.html">Questions & Answers</a></li>
+        <li><a href="Mission Statement.html">Mission Statement</a></li>
+        <li><a href="Disclaimers.html">Disclaimers</a></li>
+        <li><a href="ratesAndFees.html">rates and fees</a></li>
+      </ul>
+    </footer>
+    <script src="/JS/accounts.js"></script>
+  </body>
 </html>

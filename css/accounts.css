@@ -1,14 +1,58 @@
+
+/*################################################################*/
+/* general settings*/
+/*################################################################*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+
+/*################################################################*/
+/* greeting settings*/
+/*################################################################*/
+.greeting {
+    text-align: center;
+}
+
+/*################################################################*/
+/* account settings */
+/*################################################################*/
+.all-accounts {
     font-family: 'Poppins', sans-serif;
     background-color: #f1f1f1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    height: 100vh;
+    height: 50vh;
+}
+/*################################################################*/
+/* button sections */
+/*################################################################*/
+
+
+.deposit, .withdraw {
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+}
+
+.deposit {
+    background-color: green;
+}
+
+.withdraw {
+    background-color: red;
+}
+
+/*################################################################*/
+/* modifying account settings */
+/*################################################################*/
+
+.account-actions {
+    gap: 10px;
+    height: 30rem;
+    display: none;
 }
