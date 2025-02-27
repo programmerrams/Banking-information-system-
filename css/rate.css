@@ -1,0 +1,11 @@
+.info-box {
+  display: flex;
+  flex-direction: row;
+  font-size:30px;
+}
+
+.amount {
+  align-self: center;
+  margin-left: 10px; 
+}
+
