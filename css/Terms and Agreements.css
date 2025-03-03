@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -13,21 +14,26 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 h1 {
     text-align: center;
     color: #333;
 }
+
 h2 {
     color: #0073e6;
     margin-bottom: 10px;
 }
+
 p {
     color: #555;
     margin-bottom: 15px;
 }
+
 ol {
     margin-bottom: 20px;
 }
+
 li {
     margin-bottom: 10px;
 }

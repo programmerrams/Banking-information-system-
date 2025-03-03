@@ -1,1 +1,8 @@
 /* Disclaimer Settings */
+.disclaimer-description {
+    color: red;
+}
+
+.term-description {
+    color: green;
+}
