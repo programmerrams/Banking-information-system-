@@ -22,25 +22,26 @@
 
     <header>
       <h1>Request Loans</h1>
-      <! -- Temporary -- !>
-      <form action="">
+
+      <section action="">
         <label for="qone">How much money do you need?</label><br />
         <input
           type="text"
           id="qone"
           name="qone"
+          class="loan-amount"
           placeholder="$5000"
-        /><br /><br />
+        /><br />
 
         <label for="qtwo">How long will you need this money for?</label>
-        <select name="loan-length" id="loan-length">
-          <option value="">select years</option>
-          <option value="one year">1 years</option>
-          <option value="five years">5 years</option>
-          <option value="ten years">10 years</option>
-          <option value="fifteen years">15 years</option>
-          <option value="twenty years">20 years</option>
-          <option value="thirty years">30 years</option>
+        <select name="loan-length" id="loan-length" class="loan-length">
+          <option value="blank">select years</option>
+          <option value="one-year">1 year</option>
+          <option value="five-years">5 years</option>
+          <option value="ten-years">10 years</option>
+          <option value="fifteen-years">15 years</option>
+          <option value="twenty-years">20 years</option>
+          <option value="thirty-years">30 years</option>
         </select>
 
         <p>Reason for loan</p>
@@ -51,8 +52,8 @@
           The interest rate will be 20%.<br />
           The lower the credit score, the higher the interest rate.
         </p>
-        <input type="submit" value="Submit" />
-      </form>
+        <button class="submit">submit</button>
+      </section>
     </header>
 
     <footer>
@@ -66,5 +67,6 @@
         </ul>
       </nav>
     </footer>
+    <script src="../js/loan.js"></script>
   </body>
 </html>

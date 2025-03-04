@@ -24,6 +24,14 @@ function creditCardValue(creditscore) {
   }
 }
 
+// makes sure the user doesn't add any numbers to the first and last name fields
+firstName.addEventListener("input", function () {
+  this.value = this.value.replace(/[0-9]/g, "");
+});
+lastName.addEventListener("input", function () {
+  this.value = this.value.replace(/[0-9]/g, "");
+});
+
 submitBtn.addEventListener("click", function () {
   // Validate all fields are filled
   if (
@@ -35,7 +43,16 @@ submitBtn.addEventListener("click", function () {
     alert("Please fill in all fields");
     return;
   }
+  // validate the input is strings only for first and last name
+  function validateInput(firstName, lastName) {
+    let regex = /^[a-zA-Z]*$/;
 
+    if (!regex.test(firstName.value || lastName.value)) {
+      alert("Please enter only letters");
+
+      input.value = ""; // Clear the input field
+    }
+  }
   // Parse and validate salary
   let salaryValue = parseFloat(salary.value, 2);
   if (isNaN(salaryValue) || salaryValue <= 0) {
@@ -44,6 +61,7 @@ submitBtn.addEventListener("click", function () {
   }
 
   // Validate credit score range
+
   let creditScoreValue = parseInt(creditScore.value);
   if (creditScoreValue < 300 || creditScoreValue > 850) {
     alert("Credit score must be between 300 and 850");
@@ -55,9 +73,9 @@ submitBtn.addEventListener("click", function () {
 
   //convert credit limit to a string
   creditLimit = creditLimit.toString();
-  console.log(creditLimit)
-  console.log (typeof creditLimit);
-    // credit.innerHTML = `Your credit card limit is $${creditLimit}`;
+  console.log(creditLimit);
+  console.log(typeof creditLimit);
+  // credit.innerHTML = `Your credit card limit is $${creditLimit}`;
 
   // If all validations pass
   // alert("Thank you for your submission!");

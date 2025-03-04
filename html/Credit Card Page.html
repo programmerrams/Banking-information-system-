@@ -24,15 +24,16 @@
         <div class="name">
           <h1>What is your name?</h1>
           <label for="">First Name</label>
-          <input type="text" placeholder="John" class = "firstName" required />
+          <input type="text" placeholder="John" class = "firstName" required pattern="[a-zA-Z]*" />
           <label for="">Last Name</label>
-          <input type="text" placeholder="Doe" required class = "lastName"/>
+          <input type="text" placeholder="Doe" required class = "lastName" pattern="[a-zA-Z]*"/>
         </div>
 
         <div class="credit-score-box">
           <h1>What is your credit score?</h1>
           <label for="">Credit Score</label>
           <input type="number" placeholder="300" min="300" max="850" required class = "credit-score" />
+          <p> please enter a number from 300 to 850 </p>
         </div>
 
         <div class="salary">
