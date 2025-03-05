@@ -43,16 +43,7 @@ submitBtn.addEventListener("click", function () {
     alert("Please fill in all fields");
     return;
   }
-  // validate the input is strings only for first and last name
-  function validateInput(firstName, lastName) {
-    let regex = /^[a-zA-Z]*$/;
-
-    if (!regex.test(firstName.value || lastName.value)) {
-      alert("Please enter only letters");
-
-      input.value = ""; // Clear the input field
-    }
-  }
+  
   // Parse and validate salary
   let salaryValue = parseFloat(salary.value, 2);
   if (isNaN(salaryValue) || salaryValue <= 0) {
