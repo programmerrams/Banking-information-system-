@@ -43,7 +43,7 @@ submitBtn.addEventListener("click", function () {
     alert("Please fill in all fields");
     return;
   }
-  
+
   // Parse and validate salary
   let salaryValue = parseFloat(salary.value, 2);
   if (isNaN(salaryValue) || salaryValue <= 0) {
@@ -62,32 +62,14 @@ submitBtn.addEventListener("click", function () {
   // Calculate credit card limit
   let creditLimit = creditCardValue(creditScoreValue);
 
-  //convert credit limit to a string
-  creditLimit = creditLimit.toString();
-  console.log(creditLimit);
-  console.log(typeof creditLimit);
-  // credit.innerHTML = `Your credit card limit is $${creditLimit}`;
-
   // If all validations pass
   // alert("Thank you for your submission!");
-  console.log("Form submitted successfully");
-  console.log("Salary:", salaryValue);
-  console.log("Credit Score:", creditScoreValue);
-  console.log("Credit Limit:", creditLimit);
-  console.log("First Name:", firstName.value);
-  console.log("Last Name:", lastName.value);
 
   localStorage.setItem("credit", JSON.stringify(credit));
   localStorage.setItem("creditAmount", creditLimit);
   localStorage.setItem("Credit Score", JSON.stringify(creditScoreValue));
   localStorage.setItem("firstName", firstName.value);
   localStorage.setItem("lastName", lastName.value);
-
-  //verifying all results are saved in local storage
-  console.log(localStorage.getItem("creditAmount"));
-  console.log(localStorage.getItem("Credit Score"));
-  console.log(localStorage.getItem("firstName"));
-  console.log(localStorage.getItem("lastName"));
 
   // opening the credit result page
   window.location.href = "creditResults.html";
