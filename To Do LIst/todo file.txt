@@ -1,0 +1,8 @@
+1. store all important informing to a database 
+   - we could use either firebase. 
+  -  we could use sql to store data from the registration. 
+
+
+2. add more functionality to accounts page 
+ -   make a function that will calculate a new balance for user. 
+ 
