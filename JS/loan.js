@@ -25,7 +25,9 @@ function calculateLoanPayment(principal, interestRate, loanTermYears) {
   return monthlyPayment;
 }
 
-submitButton.addEventListener("click", function () {
+// calculate monthly payments of the loan
+
+function calculateMonthlyPayment() {
   switch (loanTerm.value) {
     case "one-year":
       loanYears = 1;
@@ -51,15 +53,18 @@ submitButton.addEventListener("click", function () {
   }
 
   let loanAmountValue = parseFloat(loanAmount.value);
-  console.log(loanAmountValue);
 
-  let monthlyPayment = calculateLoanPayment(loanAmountValue, interestRate, loanYears);
+  let monthlyPayment = calculateLoanPayment(
+    loanAmountValue,
+    interestRate,
+    loanYears
+  );
   monthlyPayment = monthlyPayment.toFixed(2);
 
   // Display the monthly payment on the console
   console.log(monthlyPayment);
   console.log(interestRate);
   console.log(loanYears);
+}
 
-  // Display the monthly payment on the page
-});
+submitButton.addEventListener("click", calculateMonthlyPayment);
