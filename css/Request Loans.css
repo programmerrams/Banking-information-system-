@@ -1,8 +1,16 @@
 h1 {
-    color: red;
+  color: red;
 }
 
 .reason-box {
-    display: flex;
-    gap: 10px
+  display: flex;
+  gap: 10px;
+}
+
+.loan-app {
+  margin-left: 20px;
+}
+
+.application-results {
+  display: none;
 }
