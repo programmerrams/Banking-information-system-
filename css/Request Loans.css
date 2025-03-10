@@ -2,3 +2,7 @@ h1 {
     color: red;
 }
 
+.reason-box {
+    display: flex;
+    gap: 10px
+}

@@ -28,6 +28,13 @@ function calculateLoanPayment(principal, interestRate, loanTermYears) {
 // calculate monthly payments of the loan
 
 function calculateMonthlyPayment() {
+  // Validate all fields are filled
+  if (loanAmount.value === "" || loanTerm.value == "") {
+    alert("Please fill in all fields");
+    return;
+  }
+
+  // Switch statement to determine the loan term in years
   switch (loanTerm.value) {
     case "one-year":
       loanYears = 1;
@@ -65,6 +72,13 @@ function calculateMonthlyPayment() {
   console.log(monthlyPayment);
   console.log(interestRate);
   console.log(loanYears);
+
+  // selecting radio buttons
+  let reasonRadioButtons = document.querySelectorAll(
+    'input[name="reason"]:checked'
+  );
+  console.log(reasonRadioButtons);
 }
 
+// allows the submit to be clicked
 submitButton.addEventListener("click", calculateMonthlyPayment);
