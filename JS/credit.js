@@ -14,10 +14,12 @@ let creditScore = document.querySelector(".credit-score");
 
 let submitBtn = document.querySelector(".submit-btn");
 
+let creditPercent = 0.25
+
 // Function to calculate credit card limit based on salary and credit score
 function creditCardValue(creditscore) {
   if (creditscore >= 600) {
-    let amountlimit = parseFloat(salary.value) * 0.25;
+    let amountlimit = parseFloat(salary.value) * creditPercent;
     return amountlimit;
   } else {
     return "You are not qualified for a credit card";

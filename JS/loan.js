@@ -1,3 +1,4 @@
+"use strict";
 // declaring variables
 
 let loanAmount = document.querySelector(".loan-amount");
@@ -28,6 +29,27 @@ function calculateLoanPayment(principal, interestRate, loanTermYears) {
 // calculate monthly payments of the loan
 
 function calculateMonthlyPayment() {
+  // selecting radio buttons
+  let reasonRadioButtons = document.querySelectorAll(
+    'input[name="reason"]:checked'
+  );
+
+  // let currentRadioButton = document.querySelector('input[name="reason"]');
+  // console.log(currentRadioButton);
+
+  // Validate all fields are filled
+  if (
+    loanAmount.value === "" ||
+    loanTerm.value == "" ||
+    reasonRadioButtons.length === 0
+  ) {
+    alert("Please fill in all fields");
+    return;
+  }
+
+  console.log(reasonRadioButtons);
+
+  // Switch statement to determine the loan term in years
   switch (loanTerm.value) {
     case "one-year":
       loanYears = 1;
@@ -65,6 +87,34 @@ function calculateMonthlyPayment() {
   console.log(monthlyPayment);
   console.log(interestRate);
   console.log(loanYears);
+
+  // showing the results on the results section
+
+  // monthly payment displayed
+  document.querySelector(".monthly-payment").innerHTML = `$${monthlyPayment}`;
+
+  // loan amount displayed
+  document.querySelector(
+    ".loan-amount-result"
+  ).innerHTML = `$${loanAmountValue}`;
+
+  // loan term displayed
+  document.querySelector(
+    ".loan-length-result"
+  ).innerHTML = `${loanYears} years`;
+
+  // interest rate displayed
+  document.querySelector(".interest-rate").innerHTML = `${interestRate}%`;
+
+  // reason for loan displayed
+  document.querySelector(
+    ".reason-result"
+  ).innerHTML = `${reasonRadioButtons[0].value}`;
+
+
+  // make the application results visible
+  document.querySelector(".application-results").style.display = "block";
 }
 
+// allows the submit to be clicked
 submitButton.addEventListener("click", calculateMonthlyPayment);

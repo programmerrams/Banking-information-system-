@@ -20,10 +20,9 @@
       </ul>
     </nav>
 
+    <h1>Request Loans</h1>
     <header>
-      <h1>Request Loans</h1>
-
-      <section action="">
+      <section class="loan-app">
         <label for="qone">How much money do you need?</label><br />
         <input
           type="text"
@@ -33,9 +32,9 @@
           placeholder="$5000"
         /><br />
 
-        <label for="qtwo">How long will you need this money for?</label>
+        <label>How long will you need this money for?</label>
         <select name="loan-length" id="loan-length" class="loan-length">
-          <option value="blank">select years</option>
+          <option value="">select years</option>
           <option value="one-year">1 year</option>
           <option value="five-years">5 years</option>
           <option value="ten-years">10 years</option>
@@ -45,6 +44,54 @@
         </select>
 
         <p>Reason for loan</p>
+        <figure class="reason-box">
+          <div class="radio-grouped">
+            <input
+              type="radio"
+              id="car"
+              name="reason"
+              value="car"
+              class="reason"
+            /><label for="car">Car</label><br />
+          </div>
+          <div class="radio-grouped">
+            <input
+              type="radio"
+              id="home"
+              name="reason"
+              value="home"
+              class="reason"
+            /><label for="home">home</label><br />
+          </div>
+          <div class="radio-grouped">
+            <input
+              type="radio"
+              id="business venture "
+              name="reason"
+              value="business venture"
+              class="reason"
+            /><label for="business venture">business venture</label>
+          </div>
+          <div class="radio-grouped">
+            <input
+              type="radio"
+              id="student loan"
+              name="reason"
+              value="student-loan"
+              class="reason"
+            /><label for="student-loan">student loan</label>
+          </div>
+          <div class="radio-grouped">
+            <input
+              type="radio"
+              id="personal loan"
+              name="reason"
+              value="business venture"
+              class="reason"
+            /><label for="personal loan">personal loan</label>
+          </div>
+        </figure>
+        <br />
         <br />
         <p>
           Credit Score:<br />
@@ -53,6 +100,15 @@
           The lower the credit score, the higher the interest rate.
         </p>
         <button class="submit">submit</button>
+      </section>
+
+      <section class="application-results ">
+        <h2>Application Results</h2>
+        <p>Loan Amount: <span class="loan-amount-result"></span></p>
+        <p>Loan Length: <span class="loan-length-result"></span></p>
+        <p>Reason for Loan: <span class="reason-result"></span></p>
+        <p>Interest Rate: <span class="interest-rate"></span></p>
+        <p>Monthly Payment: <span class="monthly-payment"></span></p>
       </section>
     </header>
 
