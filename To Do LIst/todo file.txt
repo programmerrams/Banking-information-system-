@@ -2,7 +2,6 @@
    - we could use either firebase. 
   -  we could use sql to store data from the registration. 
 
-
 2. add more functionality to accounts page 
 -  make a function that will calculate a new balance for user. 
 -  make a function that will allow user to add money to their account.
@@ -10,3 +9,6 @@
 3. add more functionality to dashboard page
 -  make a function that will allow user to view all of their transactions.
 -  make a function that will allow user to view all of their accounts.
+
+4. Update Request Loans page
+- Add multiple reasons for getting a loan. 
