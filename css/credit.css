@@ -1,32 +1,51 @@
-/************************************************
-  Form Settings
-******************************************************/
-.basic-info {
-  margin-top: 5rem;
-}
-
-.name {
+/* Center the content inside the main tag */
+main {
   display: flex;
   flex-direction: column;
-  width: 24vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 600px; /* Limit the width of the form */
+  margin: 20px auto; /* Center the main content horizontally with auto margins */
+  padding: 20px;
+  background-color: #ffffff; /* Optional: Add a white background for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  border-radius: 8px; /* Optional: Add rounded corners */
 }
 
-.basic-info-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+/* Style for form sections */
+.form-section {
+  margin-bottom: 20px;
 }
 
-/* submit button settings */
+/* Style for labels and inputs */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Style for the submit button */
 .submit-btn {
-  background-color: black;
-  color: white;
   padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 20px;
-  align-content: center;
-  width: 50%;
+  font-size: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
 }
