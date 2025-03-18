@@ -52,3 +52,17 @@ CREATE TABLE loans (
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE, -- Deletes loans if customer is deleted
     INDEX (customer_id) -- Improves query performance for customer-related queries
 );
+
+-- Credit Card Table
+CREATE TABLE credit_cards (
+    card_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique identifier for each credit card
+    card_number BIGINT NOT NULL UNIQUE, -- Ensures unique credit card numbers
+    card_type ENUM('Visa', 'Mastercard', 'American Express') NOT NULL, -- Restricts to valid card types
+    credit_limit DECIMAL(15, 2) NOT NULL CHECK (credit_limit > 0), -- Ensures positive credit limit
+    balance DECIMAL(15, 2) DEFAULT 0.00, -- Ensures precision for monetary values
+    customer_id INT NOT NULL, -- Links credit card to a customer
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Tracks record creation
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, -- Tracks record updates
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE, -- Deletes credit cards if customer is deleted
+    INDEX (customer_id) -- Improves query performance for customer-related queries
+);

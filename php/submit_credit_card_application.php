@@ -1,12 +1,12 @@
 <?php
-// Database connection details
-$servername = "localhost";
-$username = "root"; // Replace with your database username
-$password = ""; // Replace with your database password
-$dbname = "banking_system";
+// Database connection details for Flag Bank
+$servername = "localhost"; // Replace with your database server (e.g., "127.0.0.1" or a remote server address)
+$username = "jeremy"; // Replace with your Flag Bank database username
+$password = "1234"; // Replace with your Flag Bank database password
+$dbname = "FlagBank"; // Replace with the name of the Flag Bank database
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli("127.0.0.1", $jeremy, "1234", $FlagBank);
 
 // Check connection
 if ($conn->connect_error) {
