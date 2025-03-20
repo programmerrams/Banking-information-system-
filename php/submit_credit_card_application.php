@@ -30,7 +30,7 @@ function test_input($data) {
 }
 
 // Prepare and bind
-$sql = "INSERT INTO credit_cards (first_name, last_name, credit_score, annual_salary) 
+$sql = "INSERT INTO credit_cards (`first_name`, `last_name`, `credit_score`, `annual_salary`) 
         VALUES (?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
 
