@@ -13,23 +13,21 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO `c"
-
 // Get form data
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $creditScore = $_POST['creditScore'];
 $annualSalary = $_POST['annualSalary'];
 
-Welcome <?php echo $_POST['firstName']; ?> 
-<?php echo $_POST['lastName']; ?>!<br>
-Your credit score is: <?php echo $_POST['creditScore']; ?><br>
-Your annual salary is: <?php echo $_POST['annualSalary']; ?><br>
-
 // Prepare and bind
 $sql = "INSERT INTO credit_cards (first_name, last_name, credit_score, annual_salary) 
         VALUES (?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
+
+if (!$stmt) {
+    die("Preparation failed: " . $conn->error);
+}
+
 $stmt->bind_param("ssis", $firstName, $lastName, $creditScore, $annualSalary);
 
 // Execute the statement
