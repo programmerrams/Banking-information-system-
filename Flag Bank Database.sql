@@ -56,10 +56,10 @@ CREATE TABLE loans (
 -- Credit Card Table
 CREATE TABLE credit_cards (
     card_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique identifier for each credit card
-    card_number BIGINT NOT NULL UNIQUE, -- Ensures unique credit card numbers
-    card_type ENUM('Visa', 'Mastercard', 'American Express') NOT NULL, -- Restricts to valid card types
-    credit_limit DECIMAL(15, 2) NOT NULL CHECK (credit_limit > 0), -- Ensures positive credit limit
-    balance DECIMAL(15, 2) DEFAULT 0.00, -- Ensures precision for monetary values
+    first_name VARCHAR(255) NOT NULL, -- Customer's first name
+    last_name VARCHAR(255) NOT NULL, -- Customer's last name
+    credit_score INT NOT NULL CHECK (credit_score BETWEEN 300 AND 850), -- Validates credit score range
+    annual_salary DECIMAL(15, 2) NOT NULL CHECK (annual_salary > 0), -- Ensures positive annual salary
     customer_id INT NOT NULL, -- Links credit card to a customer
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Tracks record creation
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, -- Tracks record updates
