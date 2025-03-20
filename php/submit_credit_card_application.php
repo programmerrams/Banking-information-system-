@@ -14,10 +14,20 @@ if ($conn->connect_error) {
 }
 
 // Get form data
-$first_name = $_POST['first_name'];
-$last_name = $_POST['last_name'];
-$credit_score = $_POST['credit_score'];
-$annual_salary = $_POST['annual_salary'];
+$first_name = $last_name = $credit_score = $annual_salary = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $first_name = trim($_POST['first_name']);
+    $last_name = trim($_POST['last_name']);
+    $credit_score = intval($_POST['credit_score']);
+    $annual_salary = floatval($_POST['annual_salary']);
+}
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 
 // Prepare and bind
 $sql = "INSERT INTO credit_cards (first_name, last_name, credit_score, annual_salary) 
