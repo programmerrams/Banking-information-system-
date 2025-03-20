@@ -14,10 +14,10 @@ if ($conn->connect_error) {
 }
 
 // Get form data
-$firstName = $_POST['firstName'];
-$lastName = $_POST['lastName'];
-$creditScore = $_POST['creditScore'];
-$annualSalary = $_POST['annualSalary'];
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
+$credit_score = $_POST['credit_score'];
+$annual_salary = $_POST['annual_salary'];
 
 // Prepare and bind
 $sql = "INSERT INTO credit_cards (first_name, last_name, credit_score, annual_salary) 
@@ -28,7 +28,7 @@ if (!$stmt) {
     die("Preparation failed: " . $conn->error);
 }
 
-$stmt->bind_param("ssis", $firstName, $lastName, $creditScore, $annualSalary);
+$stmt->bind_param("ssis", $first_name, $last_name, $credit_score, $annual_salary);
 
 // Execute the statement
 if ($stmt->execute()) {
