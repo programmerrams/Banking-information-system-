@@ -16,6 +16,15 @@ if ($conn->connect_error) {
 // Get form data
 $first_name = $last_name = $credit_score = $annual_salary = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $data = $_REQUEST['val1'];
+
+    if (empty($data)) {
+        echo "data is empty";
+    } else {
+        echo $data;
+    }
+
     $first_name = trim($_POST['first_name']);
     $last_name = trim($_POST['last_name']);
     $credit_score = intval($_POST['credit_score']);
