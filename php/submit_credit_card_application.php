@@ -21,6 +21,11 @@ $lastName = $_POST['lastName'];
 $creditScore = $_POST['creditScore'];
 $annualSalary = $_POST['annualSalary'];
 
+Welcome <?php echo $_POST['firstName']; ?> 
+<?php echo $_POST['lastName']; ?>!<br>
+Your credit score is: <?php echo $_POST['creditScore']; ?><br>
+Your annual salary is: <?php echo $_POST['annualSalary']; ?><br>
+
 // Prepare and bind
 $sql = "INSERT INTO credit_cards (first_name, last_name, credit_score, annual_salary) 
         VALUES (?, ?, ?, ?)";
