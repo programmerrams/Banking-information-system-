@@ -13,50 +13,46 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Get form data
-$first_name = $last_name = $credit_score = $annual_salary = "";
+// Check if the request method is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    $data = $_REQUEST['val1'];
+    // Get form data and sanitize inputs
+    $first_name = test_input($_POST['firstName']);
+    $last_name = test_input($_POST['lastName']);
+    $credit_score = intval($_POST['creditScore']);
+    $annual_salary = floatval($_POST['annualSalary']);
 
-    if (empty($data)) {
-        echo "data is empty";
-    } else {
-        echo $data;
+    // Prepare and bind the SQL statement
+    $sql = "INSERT INTO credit_cards (first_name, last_name, credit_score, annual_salary) 
+            VALUES (?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+
+    if (!$stmt) {
+        die("Preparation failed: " . $conn->error);
     }
 
-    $first_name = trim($_POST['first_name']);
-    $last_name = trim($_POST['last_name']);
-    $credit_score = intval($_POST['credit_score']);
-    $annual_salary = floatval($_POST['annual_salary']);
+    $stmt->bind_param("ssis", $first_name, $last_name, $credit_score, $annual_salary);
+
+    // Execute the statement
+    if ($stmt->execute()) {
+        echo "Application submitted successfully!";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    // Close the statement
+    $stmt->close();
+} else {
+    echo "Invalid request method.";
 }
 
+// Close the connection
+$conn->close();
+
+// Function to sanitize input
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
 }
-
-// Prepare and bind
-$sql = "INSERT INTO credit_cards (`first_name`, `last_name`, `credit_score`, `annual_salary`) 
-        VALUES (?, ?, ?, ?)";
-$stmt = $conn->prepare($sql);
-
-if (!$stmt) {
-    die("Preparation failed: " . $conn->error);
-}
-
-$stmt->bind_param("ssis", $first_name, $last_name, $credit_score, $annual_salary);
-
-// Execute the statement
-if ($stmt->execute()) {
-    echo "Application submitted successfully!";
-} else {
-    echo "Error: " . $stmt->error;
-}
-
-// Close the connection
-$stmt->close();
-$conn->close();
 ?>
