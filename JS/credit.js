@@ -1,5 +1,6 @@
 "strict mode";
 
+
 // declaring all variables and assigning them to the respective elements
 
 let credit = document.getElementById("credit");
