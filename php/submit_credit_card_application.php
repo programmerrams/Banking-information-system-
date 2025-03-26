@@ -1,8 +1,8 @@
 <?php
 // Database connection details for Flag Bank
-$servername = "localhost"; // Replace with your database server (e.g., "127.0.0.1" or a remote server address)
+$servername = "127.0.0.1"; // Replace with your database server (e.g., "127.0.0.1" or a remote server address)
 $username = "root"; // Replace with your MySQL username
-$password = ""; // Replace with your MySQL password
+$password = "Supersharky2000!"; // Replace with your MySQL password
 $dbname = "FlagBank"; // Replace with the name of the Flag Bank database
 
 // Create connection

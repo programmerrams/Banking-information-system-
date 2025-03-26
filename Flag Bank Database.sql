@@ -7,7 +7,7 @@ CREATE TABLE customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique identifier for each customer
     first_name VARCHAR(255) NOT NULL, -- Customer's first name
     last_name VARCHAR(255) NOT NULL, -- Customer's last name
-    address VARCHAR(255), -- Customer's address
+    _address VARCHAR(255), -- Customer's address
     phone VARCHAR(15) NOT NULL CHECK (LENGTH(phone) BETWEEN 10 AND 15), -- Validates phone length
     email VARCHAR(255) UNIQUE, -- Ensures unique email addresses
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Tracks record creation
