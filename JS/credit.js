@@ -41,7 +41,7 @@ submitBtn.addEventListener("click", function () {
     firstName.value === "" ||
     lastName.value === "" ||
     salary.value === "" ||
-    creditScore.value === ""
+    creditScore === ""
   ) {
     alert("Please fill in all fields");
     return;

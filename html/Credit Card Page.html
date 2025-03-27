@@ -35,7 +35,7 @@
         information is accurate.
       </p>
       <br />
-      <form action="../php/submit_credit_card_application.php" method="POST">
+      <div class = "credit-card-section">
         <!-- Name Section -->
         <div class="form-section name">
           <h2>Personal Information</h2>
@@ -70,6 +70,7 @@
             type="number"
             id="creditScore"
             name="creditScore"
+            class="credit-score"
             placeholder="300"
             min="300"
             max="850"
@@ -87,6 +88,7 @@
             id="annualSalary"
             name="annualSalary"
             placeholder="$30000"
+            class = "salary-amount"
             min="0"
             required
           />
@@ -96,7 +98,7 @@
         <div class="form-section submit">
           <button type="submit" class="submit-btn">Submit Application</button>
         </div>
-      </form>
+      </div>
     </main>
 
     <!-- Footer -->
