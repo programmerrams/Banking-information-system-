@@ -1,6 +1,7 @@
 1. store all important informing to a database 
-   - we could use either firebase. 
   -  we could use sql to store data from the registration. 
+  - https://www.youtube.com/watch?v=IagGGcC95Ig&t=882s
+    a. a video on how to use php to insert data into a database. 
 
 2. add more functionality to accounts page 
 -  make a function that will calculate a new balance for user. 

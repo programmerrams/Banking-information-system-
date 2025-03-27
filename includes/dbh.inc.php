@@ -1,7 +1,7 @@
 <?php 
 
 $dsn = 'mysql:host=localhost;dbname=FlagBank';
-$db_username = 'root';
+$db_username = '127.0.0.1';
 $db_password = 'Supersharky2000!';
 
 // pdo stand for PHP Data Object
