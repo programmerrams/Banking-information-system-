@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,13 +37,14 @@
         information is accurate.
       </p>
       <br />
-      <form action = "../includes/formhandler.inc.php" method = "post">
+      <form action = "../php/submit_credit_card_application.php" method = "post">
         <!-- Name Section -->
         <div class="form-section name">
           <h2>Personal Information</h2>
-          <label for="firstName">First Name</label>
+          <label for="formfirstName">First Name</label>
           <input
             type="text"
+            id = "firstName"
             name="formFirstName"
             class="firstName"
             placeholder="John"
@@ -49,23 +52,22 @@
             pattern="[a-zA-Z]*"
           />
 
-          <label for="lastName">Last Name</label>
+          <label for="formlastName">Last Name</label>
           <input
             type="text"
-            class="lastName"
+            id = "firstName"
             name="formLastName"
+            class="lastName"
             placeholder="Doe"
             required
             pattern="[a-zA-Z]*"
           />
         </div>
 
-        <!-- Address Section -->
-
         <!-- Credit Score Section -->
         <div class="form-section credit-score-box">
           <h2>Credit Score</h2>
-          <label for="creditScore">Score</label>
+          <label for="formcreditScore">Score</label>
           <input
             type="number"
             id="creditScore"
@@ -82,7 +84,7 @@
         <!-- Salary Section -->
         <div class="form-section salary">
           <h2>Annual Salary</h2>
-          <label for="annualSalary">Net Income</label>
+          <label for="formannualSalary">Net Income</label>
           <input
             type="number"
             id="annualSalary"
