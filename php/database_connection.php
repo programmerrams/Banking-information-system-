@@ -1,7 +1,7 @@
 <?php
     $db_server = "localhost";
     $db_user = "root";
-    $db_pass = "";
+    $db_pass = "Supersharky2000!";
     $db_name = "flagbank";
     $conn = "";
 

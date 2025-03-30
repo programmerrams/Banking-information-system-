@@ -1,0 +1,38 @@
+.stat-change {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.number-box {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  align-items:center;
+}
+
+input {
+  width: 30vw;
+  height: 30px;
+  margin-left: 10px;
+  font-size: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button {
+  background-color: blueviolet;
+  color: white;
+  font-size: 30px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 20px;
+}
