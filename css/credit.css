@@ -6,12 +6,17 @@ main {
   justify-content: center;
   text-align: center;
   width: 100%;
-  max-width: 600px; /* Limit the width of the form */
-  margin: 20px auto; /* Center the main content horizontally with auto margins */
+  max-width: 600px;
+  /* Limit the width of the form */
+  margin: 20px auto;
+  /* Center the main content horizontally with auto margins */
   padding: 20px;
-  background-color: #ffffff; /* Optional: Add a white background for the form */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-  border-radius: 8px; /* Optional: Add rounded corners */
+  background-color: #ffffff;
+  /* Optional: Add a white background for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: Add a subtle shadow */
+  border-radius: 8px;
+  /* Optional: Add rounded corners */
 }
 
 /* Style for form sections */
