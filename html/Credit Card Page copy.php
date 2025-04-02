@@ -88,7 +88,7 @@
 <?php
 // filepath: c:\xampp\htdocs\Banking-information-system--main\Banking-information-system--main\Banking-information-system-\php\submit_credit_card_application_temp.php
 
-// Database connection
+//Database connection
 $conn = mysqli_connect("localhost", "root", "", "flagbank2");
 
 // Check connection
