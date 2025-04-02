@@ -1,31 +1,38 @@
 <?php
-// include("database_connection.php");
 
-// recording variables from the form
-$first_name = $_POST["formFirstName"];
-$last_name = $_POST["formLastName"];
-$credit_score = $_POST["formCreditScore"];
-$annual_salary = $_POST["formAnnualSalary"];    
-
-// establishing a connection to the database
-$host = "localhost";
-$user = "root";
-$password = "";
-$dbname = "flagbank";
-
-// Create connection
-$conn = mysqli_connect("localhost", "root", "", "flagbank");
-
+$conn = mysqli_connect("localhost", "root", "", "test");
 if (isset($_POST['submit'])) {
     // Retrieving form data
-    $first_name = $_POST["formFirstName"];
-    $last_name = $_POST["formLastName"];
-    $credit_score = $_POST["formCreditScore"];
-    $annual_salary = $_POST["formAnnualSalary"];
+    $name = $_POST['name'];
+    $age = $_POST['age'];
+
+    // Using prepared statements to prevent SQL injection
+    $query = "INSERT INTO test1 (name, age) VALUES (?, ?)";
+    $stmt = mysqli_prepare($conn, $query);
+    mysqli_stmt_bind_param($stmt, "si", $name, $age);
+
+    if (mysqli_stmt_execute($stmt)) {
+        echo "<script>alert('Data inserted successfully')</script>";
+    } else {
+        echo "<script>alert('There was an error: " . mysqli_error($conn) . "')</script>";
+    }
+
+    mysqli_stmt_close($stmt);
 }
-
-$query = "INSERT INTO 'credit_cards' VALUES ('$first_name', '$last_name', '$credit_score', '$annual_salary')";
-
-mysqli_query($conn, $query);
-
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert Data</title>
+</head>
+    <body>
+        <form action="" method="post">
+            <label for="">Name</label>
+            <input type="text" name="name" required value="">
+            <label for="">Age</label>
+            <input type="text" name="age" required value="">
+            <button type="submit" name="submit">Submit</button>
+        </form>
+    </body>
+</html>
