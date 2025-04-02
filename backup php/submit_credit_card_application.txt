@@ -1,6 +1,4 @@
 <?php
-// include("database_connection.php");
-
 if (isset($_POST['submit'])) {
     // Retrieving form data
     $first_name = $_POST['formFirstName'];
@@ -48,6 +46,5 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "<h2>No data found</h2>";
 }
-
 mysqli_close($conn);
 ?>
