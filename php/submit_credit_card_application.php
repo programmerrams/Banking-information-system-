@@ -1,5 +1,5 @@
 <?php
-include("database_connection.php");
+// include("database_connection.php");
 
 if (isset($_POST['submit'])) {
     // Retrieving form data
@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $query = "INSERT INTO credit_cards (first_name, last_name, credit_score, annual_salary) 
               VALUES (?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $query);
-    mysqli_stmt_bind_param($stmt, "ssis", $first_name, $last_name, $credit_score, $annual_salary);
+    mysqli_stmt_bind_param($stmt, "ssii", $first_name, $last_name, $credit_score, $annual_salary);
 
     if (mysqli_stmt_execute($stmt)) {
         echo "<script>alert('Data inserted successfully')</script>";
