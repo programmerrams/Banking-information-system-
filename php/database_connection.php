@@ -1,7 +1,7 @@
 <?php
     $db_server = "localhost";
     $db_user = "root";
-    $db_pass = "Supersharky2000!";
+    $db_pass = "";
     $db_name = "flagbank";
     $conn = "";
 
@@ -14,4 +14,5 @@
     if ($conn){
         echo"You are connected.";
     }
+
 ?>

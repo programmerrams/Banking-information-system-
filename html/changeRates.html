@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Change Rate and fees</title>
-</head>
-<body>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rates and fees</title>
-    <link rel="stylesheet" href="../css/navigation.css" />
-    <link rel="stylesheet" href="../css/modifyRates.css" />
+    <title>Change Rate and fees</title>
   </head>
   <body>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Rates and fees</title>
+      <link rel="stylesheet" href="../css/navigation.css" />
+      <link rel="stylesheet" href="../css/modifyRates.css" />
+    </head>
+
     <nav class="nav-menu">
       <ul class="nav-list">
         <li><a href="Index.html" class="active">Home</a></li>
@@ -25,32 +25,49 @@
       </ul>
     </nav>
 
-    <section class = "Modify-section-description">
+    <section class="Modify-section-description">
       <h1 class="info-title">Modify Rates and Fees</h1>
-      <p class="figure-change">
-        Change the rates and fees.
+      <p class="figure-change">Change the rates and fees.</p>
+    </section>
+
+    <section class="Stat-change">
+      <div class="number-box">
+        <label for="">Change APR</label>
+        <input type="number" min="0" class="APR" placeholder="Enter new APR" />
+      </div>
+      <div class="number-box">
+        <label for=""> Change Late fees</label>
+        <input
+          type="number"
+          min="0"
+          class="Late-fees"
+          placeholder="Enter new Late Fees"
+        />
+      </div>
+      <div class="number-box">
+        <label for=""> Change Overdraft fees</label>
+        <input
+          type="number"
+          min="0"
+          class="Overdraft-fees"
+          placeholder="Enter new Overdraft fees"
+        />
+      </div>
+    </section>
+
+    <section class="submission-update">
+      <h1 class = "submit-title">Your changes have been saved</h1>
+      <h1>New rates are the following:</h1>
+      <p class="new-rates">APR: <span class="new-apr"></span></p>
+      <p class="new-rates">Late-fees: <span class="new-late-fees"></span></p>
+      <p class="new-rates">
+        Overdraft: <span class="new-overdraft-fees"></span>
       </p>
     </section>
 
-    <section class = "Stat-change">
-      <div class = "number-box">
-      <label for="">Change APR</label>
-      <input type="text" class="APR" placeholder="Enter new APR" />
-    </div>
-    <div class = "number-box">
-      <label for=""> Change Late fees</label>
-      <input type="text" class="Late-fees" placeholder="Enter new Late Fees" />
-    </div>
-    <div class = "number-box">
-      <label for=""> Change Overdraft fees</label>
-      <input type="text" class="Late-fees" placeholder="Enter new Overdraft fees" />
-    </div>
-    </section>
-
-    <section class = "button-section">
+    <section class="button-section">
       <button class="submit-button">Submit</button>
     </section>
-
 
     <ul class="second-nav-list">
       <li><a href="About Us.html">About Us</a></li>
@@ -59,5 +76,6 @@
       <li><a href="Disclaimers.html">Disclaimers</a></li>
       <li><a href="ratesAndFees.html">Rates & Fees</a></li>
     </ul>
-</body>
+    <script src="../JS/changeRates.js"></script>
+  </body>
 </html>

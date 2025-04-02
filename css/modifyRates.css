@@ -34,5 +34,25 @@ input {
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
+  margin: 6rem auto;
+}
+
+.submit-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: purple;
+  text-align: center;
+}
+
+.new-rates {
+  font-size: 30px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
   margin-top: 20px;
+}
+
+.submission-update {
+  display:none;
+  margin-bottom: 6rem;
 }

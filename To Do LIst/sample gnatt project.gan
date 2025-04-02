@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Sample Gnatt Project " company="" webLink="http://" view-date="2025-04-01" view-index="0" gantt-divider-location="308" resource-divider-location="300" version="3.3.3312" locale="en_US">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd15" name="Notes" width="20" order="-1"/>
+        <field id="tpd3" name="Name" width="200" order="0"/>
+        <field id="tpd4" name="Begin date" width="75" order="1"/>
+        <field id="tpd5" name="End date" width="75" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="0c47c1e347984b519eda4fb3c2577bc3" name="planning" meeting="false" start="2025-04-01" duration="1" complete="0" expand="true">
+            <task id="5" uid="d0b017263ee14df3909ae482df5ded71" name="create project plan" meeting="false" start="2025-04-01" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="1" uid="ad9e2cfaeda2415ebf427749484f36c4" name="analysis" meeting="false" start="2025-04-01" duration="2" complete="0" expand="true">
+            <task id="6" uid="d127546ba4ea4465916ded399687247a" name="create user stories" meeting="false" start="2025-04-01" duration="1" complete="0" expand="true">
+                <depend id="8" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="8" uid="be006a62edb244a8aebd1b02246b4db0" name="create product backlog" meeting="false" start="2025-04-02" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="2" uid="f4a5413ae2e64de198ef47f6a70d8ceb" name="design" meeting="false" start="2025-04-07" duration="1" complete="0" expand="true">
+            <task id="7" uid="00af7d773c574f26ac7f71dee2a7871a" name="design system origin window" meeting="false" start="2025-04-07" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="3" uid="12e355de4a7c4919a2720547f2849d14" name="development" meeting="false" start="2025-04-01" duration="1" complete="0" expand="true"/>
+        <task id="4" uid="9ead980146634432b38cf091a73dd33b" name="documentation" meeting="false" start="2025-04-01" duration="1" complete="0" expand="true"/>
+        <task id="9" uid="c0b4bb6ec5d2481aa2c7a44a6f2826c6" name="User Approved System" meeting="true" start="2025-04-18" duration="0" complete="0" expand="true">
+            <notes><![CDATA[user team has approved system.]]></notes>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Jeremy " function="SoftwareDevelopment:4" contacts="" phone=""/>
+        <resource id="1" name="Mohammad " function="Default:1" contacts="" phone=""/>
+        <resource id="2" name="Ramses" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="3" name="John Doe " function="3" contacts="" phone=""/>
+        <resource id="4" name="sarah Doe" function="4" contacts="" phone=""/>
+        <resource id="5" name="Deron Sanders " function="5" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="5" resource-id="0" function="SoftwareDevelopment:4" responsible="true" load="100.0"/>
+        <allocation task-id="9" resource-id="0" function="SoftwareDevelopment:4" responsible="false" load="100.0"/>
+        <allocation task-id="6" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="9" resource-id="1" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="7" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="9" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="6" resource-id="3" function="3" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+    <roles>
+        <role id="1" name="Developer "/>
+        <role id="2" name="analyst "/>
+        <role id="3" name="User Base Data"/>
+        <role id="4" name="User Transactional "/>
+        <role id="5" name="User Manager "/>
+    </roles>
+</project>
