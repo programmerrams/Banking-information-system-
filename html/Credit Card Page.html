@@ -1,86 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Apply for a credit card with Flag Bank. Provide your details to get started."
+    />
+    <title>Apply for a Credit Card</title>
+    <link rel="stylesheet" href="../css/Navigation.css" />
+    <link rel="stylesheet" href="../css/Credit.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Apply for a credit card with Flag Bank. Provide your details to get started." />
-  <title>Apply for a Credit Card</title>
-  <link rel="stylesheet" href="../css/Navigation.css" />
-  <link rel="stylesheet" href="../css/Credit.css" />
-</head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="nav-menu">
+      <ul class="nav-list">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Request Loans.html">Request Loans</a></li>
+        <li>
+          <a href="Credit Card Page.html" class="active"
+            >Apply for a Credit Card</a
+          >
+        </li>
+        <li><a href="Accounts.html">Manage Accounts</a></li>
+        <li class="login"><a href="Log In Page.html">Login</a></li>
+        <li><a href="Registration Page.html">Register</a></li>
+      </ul>
+    </nav>
 
-<body>
-  <!-- Navigation Bar -->
-  <nav class="nav-menu">
-    <ul class="nav-list">
-      <li><a href="Index.html">Home</a></li>
-      <li><a href="Request Loans.html">Request Loans</a></li>
-      <li>
-        <a href="Credit Card Page.html" class="active">Apply for a Credit Card</a>
-      </li>
-      <li><a href="Accounts.html">Manage Accounts</a></li>
-      <li class="login"><a href="Log In Page.html">Login</a></li>
-      <li><a href="Registration Page.html">Register</a></li>
-    </ul>
-  </nav>
+    <!-- Main Content -->
+    <main>
+      <p>
+        Fill out the form below to apply for a credit card. Please ensure all
+        information is accurate.
+      </p>
+      <br />
+      <form
+        action="../backup php/submit_credit_card_application.php"
+        method="post"
+      >
+        <!-- Name Section -->
+        <div class="form-section name">
+          <h2>Personal Information</h2>
+          <label for="formfirstName">First Name</label>
+          <input
+            type="text"
+            id="firstName"
+            name="formFirstName"
+            class="firstName"
+            placeholder="John"
+            value=""
+            required
+            pattern="[a-zA-Z]*"
+          />
 
-  <!-- Main Content -->
-  <main>
-    <p>
-      Fill out the form below to apply for a credit card. Please ensure all
-      information is accurate.
-    </p>
-    <br />
-    <form action="../php/submit_credit_card_application_temp.php" method="post">
-      <!-- Name Section -->
-      <div class="form-section name">
-        <h2>Personal Information</h2>
-        <label for="formfirstName">First Name</label>
-        <input type="text" id="firstName" name="formFirstName" class="firstName" placeholder="John" value="" required
-          pattern="[a-zA-Z]*" />
+          <label for="formlastName">Last Name</label>
+          <input
+            type="text"
+            id="lastName"
+            name="formLastName"
+            class="lastName"
+            value=""
+            placeholder="Doe"
+            required
+            pattern="[a-zA-Z]*"
+          />
+        </div>
 
-        <label for="formlastName">Last Name</label>
-        <input type="text" id="lastName" name="formLastName" class="lastName" value="" placeholder="Doe" required
-          pattern="[a-zA-Z]*" />
-      </div>
+        <!-- Credit Score Section -->
+        <div class="form-section credit-score-box">
+          <h2>Credit Score</h2>
+          <label for="formcreditScore">Score</label>
+          <input
+            type="number"
+            id="creditScore"
+            name="formCreditScore"
+            class="credit-score"
+            placeholder="300"
+            min="300"
+            value=""
+            max="850"
+            required
+          />
+          <p>Range: 300 - 850</p>
+        </div>
 
-      <!-- Credit Score Section -->
-      <div class="form-section credit-score-box">
-        <h2>Credit Score</h2>
-        <label for="formcreditScore">Score</label>
-        <input type="number" id="creditScore" name="formCreditScore" class="credit-score" placeholder="300" min="300"
-          value="" max="850" required />
-        <p>Range: 300 - 850</p>
-      </div>
+        <!-- Salary Section -->
+        <div class="form-section salary">
+          <h2>Annual Salary</h2>
+          <label for="formannualSalary">Net Income</label>
+          <input
+            type="number"
+            id="annualSalary"
+            name="formAnnualSalary"
+            placeholder="$30000"
+            class="salary-amount"
+            value=""
+            min="0"
+            required
+          />
+        </div>
 
-      <!-- Salary Section -->
-      <div class="form-section salary">
-        <h2>Annual Salary</h2>
-        <label for="formannualSalary">Net Income</label>
-        <input type="number" id="annualSalary" name="formAnnualSalary" placeholder="$30000" class="salary-amount"
-          value="" min="0" required />
-      </div>
+        <!-- Submit Button -->
+        <div class="form-section submit">
+          <button type="submit" name="submit" class="submit-btn">
+            Submit Application
+          </button>
+        </div>
+      </form>
+    </main>
 
-      <!-- Submit Button -->
-      <div class="form-section submit">
-        <button type="submit" name="submit" class="submit-btn">Submit Application</button>
-      </div>
-    </form>
-  </main>
+    <!-- Footer -->
+    <footer>
+      <ul class="second-nav-list">
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="Questions and Answers.html">Questions & Answers</a></li>
+        <li><a href="Mission Statement.html">Mission Statement</a></li>
+        <li><a href="Disclaimers.html">Disclaimers</a></li>
+        <li><a href="ratesAndFees.html">Rates & Fees</a></li>
+      </ul>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    <ul class="second-nav-list">
-      <li><a href="About Us.html">About Us</a></li>
-      <li><a href="Questions and Answers.html">Questions & Answers</a></li>
-      <li><a href="Mission Statement.html">Mission Statement</a></li>
-      <li><a href="Disclaimers.html">Disclaimers</a></li>
-      <li><a href="ratesAndFees.html">Rates & Fees</a></li>
-    </ul>
-  </footer>
-
-  <script src="../js/Credit.js"></script>
-</body>
-
+    <script src="../js/Credit.js"></script>
+  </body>
 </html>
