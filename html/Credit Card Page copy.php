@@ -105,7 +105,7 @@ if (isset($_POST['submit'])) {
     $annualSalary = $_POST['formAnnualSalary'];
 
     // Use prepared statements to prevent SQL injection
-    $query = "INSERT INTO credit_cards (first_name, last_name, credit_score, annual_salary) VALUES (?, ?, ?, ?)";
+    $query = "INSERT INTO creditcards (first_name, last_name, credit_score, annual_salary) VALUES (?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $query);
 
     if ($stmt) {
