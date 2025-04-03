@@ -32,9 +32,9 @@
       information is accurate.
     </p>
     <br />
-    <form target = "_blank" action="" method="post" class = ".submission-form>
+    <form action="" method="post" class = "submission-form">
       <!-- Name Section -->
-      <div class="form-section name">
+      <div class ="form-section">
         <h2>Personal Information</h2>
         <label for="formfirstName">First Name</label>
         <input type="text" id="firstName" name="formFirstName" class="firstName" placeholder="John" value="" required
