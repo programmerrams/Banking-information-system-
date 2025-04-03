@@ -17,6 +17,8 @@ let submitBtn = document.querySelector(".submit-btn");
 
 let creditPercent = 0.25
 
+let submissionForm = document.querySelector(".submission-form");
+
 // Function to calculate credit card limit based on salary and credit score
 function creditCardValue(creditscore) {
   if (creditscore >= 600) {
@@ -36,6 +38,9 @@ lastName.addEventListener("input", function () {
 });
 
 submitBtn.addEventListener("click", function () {
+
+  // lets the form go to another page after submission
+  submissionForm.action = "creditResults.html";
   // Validate all fields are filled
   if (
     firstName.value === "" ||

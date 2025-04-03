@@ -32,7 +32,7 @@
       information is accurate.
     </p>
     <br />
-    <form action="" method="post">
+    <form target = "_blank" action="" method="post" class = ".submission-form>
       <!-- Name Section -->
       <div class="form-section name">
         <h2>Personal Information</h2>
@@ -64,8 +64,9 @@
 
       <!-- Submit Button -->
       <div class="form-section submit">
-        <button type="submit" name="submit" class="submit-btn">Submit Application</button>
+        <button  onclick = "window.location.href = creditResults.html;" type="submit" name="submit" class="submit-btn">Submit Application</button>
       </div>
+      <script src="../js/Credit.js"></script>
     </form>
   </main>
 
@@ -80,7 +81,6 @@
     </ul>
   </footer>
 
-  <script src="../js/Credit.js"></script>
 </body>
 
 </html>
@@ -114,7 +114,8 @@ if (isset($_POST['submit'])) {
 
         // Execute the query and check for success
         if (mysqli_stmt_execute($stmt)) {
-            echo "<script>alert('Application submitted successfully!');</script>";
+            // echo "<script>alert('Application submitted successfully!');</script>";
+            echo "<scipt> window.location.href = 'creditResults.html';</script>";
         } else {
             echo "<script>alert('Error: " . mysqli_stmt_error($stmt) . "');</script>";
         }
@@ -122,7 +123,7 @@ if (isset($_POST['submit'])) {
         // Close the statement
         mysqli_stmt_close($stmt);
     } else {
-        echo "<script>alert('Error preparing the statement: " . mysqli_error($conn) . "');</script>";
+        echo "<scrip>alert('Error preparing the statement: " . mysqli_error($conn) . "');</script>";
     }
 }
 
