@@ -1,76 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Account Access</title>
+    <link rel="stylesheet" href="../css/accounts.css" />
+    <link rel="stylesheet" href="../css/navigation.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bank Account Access</title>
-  <link rel="stylesheet" href="../css/accounts.css" />
-  <link rel="stylesheet" href="../css/navigation.css" />
-</head>
+  <body>
+    <nav class="nav-menu">
+      <ul class="nav-list">
+        <li><a href="Index.html" class="active">Home</a></li>
+        <li><a href="Request Loans.html">Request Loans</a></li>
+        <li><a href="Credit Card Page.html">Apply for a Credit Card</a></li>
+        <li><a href="Accounts.html">Manage Accounts</a></li>
+        <li class="login"><a href="Log In Page.html">Login</a></li>
+        <li><a href="Registration Page.html">Register</a></li>
+      </ul>
+    </nav>
+    <h1 class="greeting">Hello User</h1>
+    <figure class="all-accounts">
+      <section class="checkings-account">
+        <h1>Checkings Account</h1>
+        <p>Account Number: #</p>
+        <p class="checking-balance">$1000.00</p>
+      </section>
 
-<body>
-  <nav class="nav-menu">
-    <ul class="nav-list">
-      <li><a href="Index.html" class="active">Home</a></li>
-      <li><a href="Request Loans.html">Request Loans</a></li>
-      <li><a href="Credit Card Page.html">Apply for a Credit Card</a></li>
-      <li><a href="Accounts.html">Manage Accounts</a></li>
-      <li class="login"><a href="Log In Page.html">Login</a></li>
-      <li><a href="Registration Page.html">Register</a></li>
-    </ul>
-  </nav>
-  <h1 class="greeting">Hello User</h1>
-  <figure class="all-accounts">
-    <section class="checkings-account">
-      <h1>Checkings Account</h1>
-      <p>Account Number: #</p>
-      <p class="checking-balance">1000.00</p>
-    </section>
+      <section class="savings-account">
+        <h1>Savings Account</h1>
+        <p>Account Number: #</p>
+        <p class="saving-balance">$5000.00</p>
+      </section>
 
-    <section class="savings-account">
-      <h1>Savings Account</h1>
-      <p>Account Number: #</p>
-      <p class="saving-balance">5000.00</p>
-    </section>
+      <section class="credit-card">
+        <h1>Credit Card Account</h1>
+        <p>Account Number: #</p>
+        <p class="credit-balance">$1000.00</p>
+      </section>
 
-    <section class="credit-card">
-      <h1>Credit Card Account</h1>
-      <p>Account Number: #</p>
-      <p class="credit-balance"> 1000.00</p>
-    </section>
+      <section class="all-buttons">
+        <button class="deposit">Deposits</button>
+        <button class="withdraw">Withdrew</button>
+      </section>
+    </figure>
+    <figure class="account-actions">
+      <h1>Which account would you like to work with ?</h1>
+      <p class="bank-action">you are doing a transaction on your account</p>
+      <select class="account-type" required>
+        <option value="">Select Account</option>
+        <option value="checkings">Checkings Account</option>
+        <option value="savings">Savings Account</option>
+        <option value="credit-card">Credit Card Account</option>
+      </select>
 
-    <section class="all-buttons">
-      <button class="deposit">Deposits</button>
-      <button class="withdraw">Withdrew</button>
-    </section>
-  </figure>
-  <figure class="account-actions">
-    <h1>Which account would you like to work with ?</h1>
-    <p class="bank-action">you are doing a transaction on your account</p>
-    <select class="account-type" required>
-      <option value="">Select Account</option>
-      <option value="checkings">Checkings Account</option>
-      <option value="savings">Savings Account</option>
-      <option value="credit-card">Credit Card Account</option>
-    </select>
+      <label for="amount">Amount</label>
+      <input type="number" placeholder="100" class="amount" required />
 
-    <label for="amount">Amount</label>
-    <input type="number" placeholder="100" class="amount" required />
-
-    <button class="submit">Submit</button>
-    <button class="hide">Cancel</button>
-  </figure>
-  <footer>
-    <ul class="second-nav-list">
-      <li><a href="About Us.html">About Us</a></li>
-      <li><a href="Questions and Answers.html">Questions & Answers</a></li>
-      <li><a href="Mission Statement.html">Mission Statement</a></li>
-      <li><a href="Disclaimers.html">Disclaimers</a></li>
-      <li><a href="ratesAndFees.html">Rates & Fees</a></li>
-    </ul>
-  </footer>
-  <script src="../JS/accounts.js"></script>
-</body>
-
+      <button class="submit">Submit</button>
+      <button class="hide">Cancel</button>
+    </figure>
+    <footer>
+      <ul class="second-nav-list">
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="Questions and Answers.html">Questions & Answers</a></li>
+        <li><a href="Mission Statement.html">Mission Statement</a></li>
+        <li><a href="Disclaimers.html">Disclaimers</a></li>
+        <li><a href="ratesAndFees.html">Rates & Fees</a></li>
+      </ul>
+    </footer>
+    <script src="../JS/accounts.js"></script>
+  </body>
 </html>
