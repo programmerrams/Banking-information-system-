@@ -6,38 +6,6 @@ let hideButton = document.querySelector(".hide");
 
 let transactiontype;
 
-// creating the workbook;
-
-// this is code is dumb and should be removed 
-
-// var wb = XLSX.utils.book_new();
-// wb.Props = {
-//   Title: "Transaction Tracker",
-//   Subject: "Transaction recorder",
-//   Author: "Ramses Brye",
-//   CreatedDate: new Date(2025, 3, 17),
-// };
-// wb.SheetNames.push("transaction log");
-// var ws_data = [["hello", "world"]];
-// var ws = XLSX.utils.aoa_to_sheet(ws_data);
-// wb.Sheets["transaction log"] = ws;
-// var wbout = XLSX.write(wb, { bookType: "xlsx", type: "binary" });
-
-// function s2ab(s) {
-//   var buf = new ArrayBuffer(s.length);
-//   var view = new Uint8Array(buf);
-//   for (var i = 0, str = s.split(""); i < s.length; i++) {
-//     view[i] = s.charCodeAt(i) & 0xff;
-//   }
-//   return buf;
-// }
-
-// submitButton.addEventListener(click, function () {
-//   SaveAs(new Blob([s2ab(wbout)]), { type: "application/octet.stream" }),
-//     "Transaction Tracker.xlsx";
-// });
-
-// initializing hidden account settings
 
 let AccountSettings = document.querySelector(".account-actions");
 
@@ -50,6 +18,8 @@ let savingsAccount = parseFloat(
 let creditCardBalance = parseFloat(
   document.querySelector(".credit-balance").innerHTML
 );
+
+console.log 
 
 let accountActions = document.querySelector(".bank-action");
 console.log(accountActions);
@@ -95,12 +65,14 @@ function executeTransaction() {
   // selects the proper account
   if (transactionAccount === "checkings") {
     affectedAccount = checkingsAccount;
+    console.log(affectedAccount);
     console.log(checkingsAccount);
   } else if (transactionAccount === "savings") {
     affectedAccount = savingsAccount;
     console.log(savingsAccount);
   } else if (transactionAccount === "credit-card") {
     affectedAccount = creditCardBalance;
+    console.log(affectedAccount);
     console.log(creditCardBalance);
   } else {
     console.log("Invalid account");
@@ -110,6 +82,7 @@ function executeTransaction() {
 
   // Validate transaction amount
   if (isNaN(transactionAmount) || transactionAmount <= 0) {
+    console.log(affectedAccount);
     console.log("Invalid transaction amount");
     alert("Please enter a valid transaction amount greater than zero.");
     return; // Exit the function if the amount is invalid
