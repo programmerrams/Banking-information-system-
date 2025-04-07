@@ -122,7 +122,9 @@ function executeTransaction() {
       document.querySelector(".credit-balance").innerHTML = creditCardBalance;
     }
   }
-
+ 
+  // Display a success message
+  alert(`Transaction successful! Your new balance is $${affectedAccount}.`);
   console.log(affectedAccount);
 }
 
