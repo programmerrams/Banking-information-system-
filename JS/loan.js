@@ -82,6 +82,8 @@ function calculateMonthlyPayment() {
     loanYears
   );
   monthlyPayment = monthlyPayment.toFixed(2);
+  // store the monthly payment in local storage
+  localStorage.setItem("monthlyPayment", monthlyPayment);
 
   // Display the monthly payment on the console
   console.log(monthlyPayment);
@@ -111,10 +113,34 @@ function calculateMonthlyPayment() {
     ".reason-result"
   ).innerHTML = `${reasonRadioButtons[0].value}`;
 
-
   // make the application results visible
   document.querySelector(".application-results").style.display = "block";
+
+  // bring the results to the next page
+  window.location.href = "loanResult.html";
 }
 
 // allows the submit to be clicked
 submitButton.addEventListener("click", calculateMonthlyPayment);
+
+// save the loan amount to local storage
+loanAmount.addEventListener("input", function () {
+  localStorage.setItem("loanAmount", loanAmount.value);
+});
+
+// save the loan term to local storage
+loanTerm.addEventListener("input", function () {
+  localStorage.setItem("loanTerm", loanTerm.value);
+});
+
+// save the interest rate to local storage
+let interestRateString = localStorage.getItem("interestRate");
+
+// save the reason for the loan to local storage
+
+let reasonRadioButtons = document.querySelectorAll('input[name="reason"]');
+reasonRadioButtons.forEach(function (radioButton) {
+  radioButton.addEventListener("change", function () {
+    localStorage.setItem("reason", radioButton.value);
+  });
+});
