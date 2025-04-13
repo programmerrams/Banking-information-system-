@@ -1,6 +1,5 @@
 "strict mode";
 
-
 // declaring all variables and assigning them to the respective elements
 
 let credit = document.getElementById("credit");
@@ -15,7 +14,7 @@ let creditScore = document.querySelector(".credit-score");
 
 let submitBtn = document.querySelector(".submit-btn");
 
-let creditPercent = 0.25
+let creditPercent = 0.25;
 
 let submissionForm = document.querySelector(".submission-form");
 
@@ -38,9 +37,10 @@ lastName.addEventListener("input", function () {
 });
 
 submitBtn.addEventListener("click", function () {
-
   // lets the form go to another page after submission
-  submissionForm.action = "creditResults.html";
+  // submissionForm.action = "creditResults.html";
+  // submissionForm.preventDefault();
+
   // Validate all fields are filled
   if (
     firstName.value === "" ||
@@ -80,6 +80,6 @@ submitBtn.addEventListener("click", function () {
   localStorage.setItem("lastName", lastName.value);
 
   // opening the credit result page
-  window.location.href = "creditResults.html";
+  // window.location.href = "creditResults.html";
   // console.log(isFloat(creditLimit));
 });

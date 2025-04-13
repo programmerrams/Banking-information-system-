@@ -27,8 +27,8 @@ if (isset($_POST['submit'])) {
 
         // Execute the query and check for success
         if (mysqli_stmt_execute($stmt)) {
-            // echo "<script>alert('Application submitted successfully!');</script>";
-            echo "<scipt> window.location.href = 'creditResults.html';</script>";
+            echo "<script>alert('Application submitted successfully!');</script>";
+            // echo "<scipt> window.location.href = 'creditResults.html';</script>";
         } else {
             echo "<script>alert('Error: " . mysqli_stmt_error($stmt) . "');</script>";
         }
@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
         // Close the statement
         mysqli_stmt_close($stmt);
     } else {
-        echo "<scrip>alert('Error preparing the statement: " . mysqli_error($conn) . "');</script>";
+        echo "<script>alert('Error preparing the statement: " . mysqli_error($conn) . "');</script>";
     }
 }
 
