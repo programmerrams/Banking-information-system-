@@ -27,8 +27,11 @@ if (isset($_POST['submit'])) {
 
         // Execute the query and check for success
         if (mysqli_stmt_execute($stmt)) {
-            echo "<script>alert('Application submitted successfully!');</script>";
-            // echo "<scipt> window.location.href = 'creditResults.html';</script>";
+            echo "<sc>alert('Application submitted successfully!');</script>";
+            // redirect to the credit result 
+            header("Location: ../html/creditResults.html");
+            exit(); // Ensure no further code is executed after the redirect
+            
         } else {
             echo "<script>alert('Error: " . mysqli_stmt_error($stmt) . "');</script>";
         }

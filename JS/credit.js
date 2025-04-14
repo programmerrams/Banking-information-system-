@@ -80,6 +80,6 @@ submitBtn.addEventListener("click", function () {
   localStorage.setItem("lastName", lastName.value);
 
   // opening the credit result page
-  // window.location.href = "creditResults.html";
+  window.location.href = "creditResults.html";
   // console.log(isFloat(creditLimit));
 });
