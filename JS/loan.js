@@ -43,6 +43,17 @@ function calculateMonthlyPayment() {
     loanTerm.value == "" ||
     reasonRadioButtons.length === 0
   ) {
+    // tells the user the inputs fields they need to fill 
+    if (loanAmount.value === "") {
+      alert("Please fill in the loan amount field");
+    }
+    if (loanTerm.value == "") {
+      alert("Please fill in the loan term field");
+    }
+    if (reasonRadioButtons.length === 0) {
+      alert("Please fill in the reason for the loan field");
+    }
+    
     alert("Please fill in all fields");
     return;
   }
