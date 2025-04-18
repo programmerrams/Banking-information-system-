@@ -2,7 +2,7 @@
 
 // declaring all relevant variables
 
-let bankStatement = document.querySelector(".credit-statement");
+let bankStatementDOM = document.querySelector(".credit-statement");
 
 let userFirstName = localStorage.getItem("firstName");
 let userLastName = localStorage.getItem("lastName");  
@@ -11,16 +11,16 @@ let creditScore = localStorage.getItem("creditScoreValue");
 
 let creditscore = Number(localStorage.getItem("Credit Score"));
 
-let yesButton = document.querySelector(".yes-Button");
-let noButton = document.querySelector(".no-Button");
+let yesButtonDOM = document.querySelector(".yes-Button");
+let noButtonDOM = document.querySelector(".no-Button");
 
-let clientCreditNumber = document.querySelector(".clientCreditNumber");
+let clientCreditNumberDOM = document.querySelector(".clientCreditNumber");
 
 
 if (creditscore >= 600) {
-bankStatement.textContent = `hello ${userFirstName} ${userLastName}, after careful consideration your credit card limit is $${creditLimitAmount}.`;
+bankStatementDOM.textContent = `hello ${userFirstName} ${userLastName}, after careful consideration your credit card limit is $${creditLimitAmount}.`;
 }else {
-    bankStatement.textContent = `hello ${userFirstName} ${userLastName}, after careful consideration you are not qualified for a credit card.`;
+    bankStatementDOM.textContent = `hello ${userFirstName} ${userLastName}, after careful consideration you are not qualified for a credit card.`;
 }
 
 function creditNumberGenerator() {
@@ -35,7 +35,7 @@ function creditNumberGenerator() {
 }
 
 // Function to handle button clicks
-yesButton.addEventListener("click", function() {
+yesButtonDOM.addEventListener("click", function() {
     alert("Thank you for accepting the terms and conditions. Your credit card will be sent to you shortly.");
 
     let creditCardNumber = creditNumberGenerator();
@@ -43,8 +43,8 @@ yesButton.addEventListener("click", function() {
     localStorage.setItem("creditCardNumber", creditCardNumber);
     
     // showing credit card number on page
-    clientCreditNumber.textContent = `Your credit card number is: ${creditCardNumber}`;
-    clientCreditNumber.style.color = "green";
+    clientCreditNumberDOM.textContent = `Your credit card number is: ${creditCardNumber}`;
+    clientCreditNumberDOM.style.color = "green";
 }
     
 );
