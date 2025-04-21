@@ -6,7 +6,6 @@ let hideButton = document.querySelector(".hide");
 
 let transactiontype;
 
-
 let AccountSettings = document.querySelector(".account-actions");
 
 let checkingsAccount = parseFloat(
@@ -19,7 +18,7 @@ let creditCardBalance = parseFloat(
   document.querySelector(".credit-balance").innerHTML
 );
 
-console.log 
+console.log;
 
 let accountActions = document.querySelector(".bank-action");
 console.log(accountActions);
@@ -38,6 +37,7 @@ function performingWithdrawFunction() {
   transactiontype = "withdraw";
   console.log(transactiontype);
   accountActions.textContent = `you are currently making a ${transactiontype}.`;
+  window.scrollTo(0, document.body.scrollHeight);
 }
 
 function performingDepositFunction() {
@@ -45,6 +45,9 @@ function performingDepositFunction() {
   transactiontype = "deposit";
   console.log(transactiontype);
   accountActions.textContent = `you are currently making a ${transactiontype}.`;
+  // scrolls down to the bottom of the page smoothly
+  window.scrollTo(0, document.body.scrollHeight);
+ 
 }
 
 // hiding the account modifying screen
@@ -122,7 +125,7 @@ function executeTransaction() {
       document.querySelector(".credit-balance").innerHTML = creditCardBalance;
     }
   }
- 
+
   // Display a success message
   alert(`Transaction successful! Your new balance is $${affectedAccount}.`);
   console.log(affectedAccount);
