@@ -1,0 +1,13 @@
+.manager-account {
+  margin-bottom: 5rem;
+}
+
+td, th {
+  padding: 1rem 2rem;
+}
+
+table{
+  border: 2px solid #000;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
