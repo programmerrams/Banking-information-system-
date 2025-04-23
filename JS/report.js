@@ -20,7 +20,7 @@ function generateReport() {
     "James",
     "Jared",
     "Javier",
-    "Ramses",
+    "Randy",
     "Jenna",
     "Malcolm",
     "Martha",
@@ -63,7 +63,7 @@ function generateReport() {
   const maskedCreditCardNumber = (number) => {
     // masks the credit card number with X's
     return number.toString().replace(/\d(?=\d{4})/g, "X");
-  }
+  };
 
   const randomFirstName = () => {
     // generates a random first name
@@ -87,6 +87,14 @@ function generateReport() {
   console.log(randomLastName());
   console.log(fakeMaskedCreditCardNumber());
   console.log(randomDollarAmount());
+
+  //  creating a h1 title for the table
+  const title = document.createElement("h1");
+  title.textContent = "Credit Card Report Table";
+  title.classList.add("report-title");
+  // appending the title to the report table
+  reportTableDOM.appendChild(title);
+
 
   // creates table with four headers
   const createTable = () => {
@@ -123,6 +131,15 @@ function generateReport() {
       row.appendChild(amount);
 
       table.appendChild(row);
+
+      // sorting amounts from smallest to largest
+      const rows = Array.from(table.querySelectorAll("tr")).slice(1);
+      rows.sort((a, b) => {
+        const amountA = parseFloat(a.cells[3].textContent.replace("$", ""));
+        const amountB = parseFloat(b.cells[3].textContent.replace("$", ""));
+        return amountA - amountB;
+      });
+      rows.forEach((row) => table.appendChild(row));
     }
   };
 
