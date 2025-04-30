@@ -117,7 +117,6 @@ body {
   text-align: center;
   font-size: 50px;
   font-weight: 600;
-  margin-bottom: 20px;
 }
 
 .bank-action {
@@ -126,6 +125,7 @@ body {
   align-items: center;
   flex-direction: column;
   font-size: 30px;
+  margin-bottom: 60px;
 }
 
 /* styles the input and select elements  */
@@ -138,6 +138,15 @@ body {
   padding-left: 10px;
   font-size: 20px;
   margin-bottom: 20px;
+}
+
+.transaction-container {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: row;
+  font-size: 30px;
+  gap: 150px;
 }
 
 /* styles the buttons in the account actions section */

@@ -51,17 +51,21 @@
     <figure class="account-actions">
       <h1>Which account would you like to work with ?</h1>
       <p class="bank-action">you are doing a transaction on your account</p>
-      <label for="account-type">Account Type</label>
-      <select class="account-type" required>
-        <option value="">Select Account</option>
-        <option value="checkings">Checkings Account</option>
-        <option value="savings">Savings Account</option>
-        <option value="credit-card">Credit Card Account</option>
-      </select>
-
-      <label for="amount">Amount</label>
-      <input type="number" placeholder="100" class="amount" required />
-
+      <section class="transaction-container">
+        <div class="account-container">
+          <label for="account-type">Account Type</label>
+          <select class="account-type" required>
+            <option value="">Select Account</option>
+            <option value="checkings">Checkings Account</option>
+            <option value="savings">Savings Account</option>
+            <option value="credit-card">Credit Card Account</option>
+          </select>
+        </div>
+        <div class="amount-container">
+          <label for="amount">Amount</label>
+          <input type="number" placeholder="100" class="amount" required />
+        </div>
+      </section>
       <div class="button-section">
         <button class="submit">Submit</button>
         <button class="hide">Cancel</button>

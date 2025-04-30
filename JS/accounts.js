@@ -38,7 +38,7 @@ function performingWithdrawFunction() {
   transactiontype = "withdraw";
   console.log(transactiontype);
   accountActionsDOM.textContent = `you are currently making a ${transactiontype}.`;
-  window.scrollTo(0, document.body.scrollHeight);
+  window.scrollTo(0, document.body.scrollHeight, behavior = "smooth", duration = 200000);
 }
 
 function performingDepositFunction() {
@@ -47,7 +47,7 @@ function performingDepositFunction() {
   console.log(transactiontype);
   accountActionsDOM.textContent = `you are currently making a ${transactiontype}.`;
   // scrolls down to the bottom of the page smoothly
-  window.scrollTo(0, document.body.scrollHeight);
+  window.scrollTo(0, document.body.scrollHeight, behavior = "smooth",duration = 20000);
 }
 
 function payingcreditCardFunction() {
@@ -55,6 +55,8 @@ function payingcreditCardFunction() {
   transactiontype = "credit card payment";
   console.log(transactiontype);
   accountActionsDOM.textContent = `you are currently making a ${transactiontype}.`;
+  // scrolls down to the bottom of the page smoothly
+  window.scrollTo(0, document.body.scrollHeight, behavior = "smooth", duration = 20000);
 }
 
 // hiding the account modifying screen
