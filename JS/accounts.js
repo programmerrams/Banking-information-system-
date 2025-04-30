@@ -1,12 +1,13 @@
 // initializing buttons
 
-let depositButton = document.querySelector(".deposit");
-let withdrawButton = document.querySelector(".withdraw");
-let hideButton = document.querySelector(".hide");
+let depositButtonDOM = document.querySelector(".deposit");
+let withdrawButtonDOM = document.querySelector(".withdraw");
+let hideButtonDOM = document.querySelector(".hide");
+let payingcreditCardDOM = document.querySelector(".credit-button");
 
 let transactiontype;
 
-let AccountSettings = document.querySelector(".account-actions");
+let AccountSettingsDOM = document.querySelector(".account-actions");
 
 let checkingsAccount = parseFloat(
   document.querySelector(".checking-balance").innerHTML
@@ -20,8 +21,8 @@ let creditCardBalance = parseFloat(
 
 console.log;
 
-let accountActions = document.querySelector(".bank-action");
-console.log(accountActions);
+let accountActionsDOM = document.querySelector(".bank-action");
+console.log(accountActionsDOM);
 
 console.log(creditCardBalance);
 console.log(savingsAccount);
@@ -30,28 +31,35 @@ console.log(checkingsAccount);
 // showing the account modifying screen
 
 function displayAccountsFunction() {
-  AccountSettings.style.display = "block";
+  AccountSettingsDOM.style.display = "block";
 }
 function performingWithdrawFunction() {
-  AccountSettings.style.display = "block";
+  AccountSettingsDOM.style.display = "block";
   transactiontype = "withdraw";
   console.log(transactiontype);
-  accountActions.textContent = `you are currently making a ${transactiontype}.`;
+  accountActionsDOM.textContent = `you are currently making a ${transactiontype}.`;
   window.scrollTo(0, document.body.scrollHeight);
 }
 
 function performingDepositFunction() {
-  AccountSettings.style.display = "block";
+  AccountSettingsDOM.style.display = "block";
   transactiontype = "deposit";
   console.log(transactiontype);
-  accountActions.textContent = `you are currently making a ${transactiontype}.`;
+  accountActionsDOM.textContent = `you are currently making a ${transactiontype}.`;
   // scrolls down to the bottom of the page smoothly
   window.scrollTo(0, document.body.scrollHeight);
 }
 
+function payingcreditCardFunction() {
+  AccountSettingsDOM.style.display = "block";
+  transactiontype = "credit card payment";
+  console.log(transactiontype);
+  accountActionsDOM.textContent = `you are currently making a ${transactiontype}.`;
+}
+
 // hiding the account modifying screen
 function hideAccountsFunction() {
-  AccountSettings.style.display = "none";
+  AccountSettingsDOM.style.display = "none";
 }
 
 // console.log(transactionAccount.value);
@@ -124,6 +132,20 @@ function executeTransaction() {
       document.querySelector(".credit-balance").innerHTML = creditCardBalance;
     }
   }
+  if (transactiontype === "credit card payment") {
+    if (transactionAmount > affectedAccount) {
+      console.log("your credit card payment is too high");
+      return alert("your credit card payment is too high");
+    } else {
+      affectedAccount -= transactionAmount;
+      // Update the displayed balance
+      creditCardBalance = affectedAccount;
+      document.querySelector(".credit-balance").innerHTML = creditCardBalance;
+      return alert(
+        `Your credit card payment of $${transactionAmount} was successful! Your new balance is $${affectedAccount}.`
+      );
+    }
+  }
 
   // Display a success message
   alert(`Transaction successful! Your new balance is $${affectedAccount}.`);
@@ -132,11 +154,12 @@ function executeTransaction() {
   // jumps back to the top of the page
   window.scrollTo(0, 0);
   // hides the account modifying screen
-  AccountSettings.style.display = "none";
+  AccountSettingsDOM.style.display = "none";
 
   // the affected account's background color changes to yellow.
   if (transactionAccount === "checkings") {
-    document.querySelector(".checking-balance").style.backgroundColor = "yellow";
+    document.querySelector(".checking-balance").style.backgroundColor =
+      "yellow";
   } else if (transactionAccount === "savings") {
     document.querySelector(".saving-balance").style.backgroundColor = "yellow";
   } else if (transactionAccount === "credit-card") {
@@ -145,13 +168,14 @@ function executeTransaction() {
 }
 
 // allows both buttons to show the account modifying screen
-depositButton.addEventListener("click", performingDepositFunction);
-withdrawButton.addEventListener("click", performingWithdrawFunction);
+depositButtonDOM.addEventListener("click", performingDepositFunction);
+withdrawButtonDOM.addEventListener("click", performingWithdrawFunction);
+payingcreditCardDOM.addEventListener("click", payingcreditCardFunction);
 
 // allows the hide button to hide the account modifying screen
-hideButton.addEventListener("click", hideAccountsFunction);
+hideButtonDOM.addEventListener("click", hideAccountsFunction);
 
 // submit button
-let submitButton = document.querySelector(".submit");
+let submitButtonDOM = document.querySelector(".submit");
 
-submitButton.addEventListener("click", executeTransaction);
+submitButtonDOM.addEventListener("click", executeTransaction);

@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 body {
@@ -77,23 +76,31 @@ body {
 
 .all-buttons {
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 .deposit,
-.withdraw {
+.withdraw,
+.credit-button {
   cursor: pointer;
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 75px;
   border-radius: 50px;
   display: inline-block;
 }
 
 .deposit {
   background-color: green;
-  margin-right: 100px;
+
 }
 
 .withdraw {
   background-color: red;
+}
+
+.credit-button {
+  background-color: yellow;
 }
 
 /*################################################################*/
@@ -118,11 +125,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 30px
+  font-size: 30px;
 }
 
 /* styles the input and select elements  */
-.account-actions input, .account-actions select {
+.account-actions input,
+.account-actions select {
   width: 300px;
   height: 50px;
   border-radius: 10px;
