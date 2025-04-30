@@ -47,7 +47,6 @@ function performingDepositFunction() {
   accountActions.textContent = `you are currently making a ${transactiontype}.`;
   // scrolls down to the bottom of the page smoothly
   window.scrollTo(0, document.body.scrollHeight);
- 
 }
 
 // hiding the account modifying screen
@@ -94,7 +93,7 @@ function executeTransaction() {
   if (transactiontype === "withdraw") {
     if (transactionAmount > affectedAccount) {
       console.log("Insufficient funds");
-      alert("Insufficient funds for this transaction.");
+      return alert("Insufficient funds for this transaction.");
     } else {
       affectedAccount -= transactionAmount;
       // Update the displayed balance
@@ -129,6 +128,20 @@ function executeTransaction() {
   // Display a success message
   alert(`Transaction successful! Your new balance is $${affectedAccount}.`);
   console.log(affectedAccount);
+
+  // jumps back to the top of the page
+  window.scrollTo(0, 0);
+  // hides the account modifying screen
+  AccountSettings.style.display = "none";
+
+  // the affected account's background color changes to yellow.
+  if (transactionAccount === "checkings") {
+    document.querySelector(".checking-balance").style.backgroundColor = "yellow";
+  } else if (transactionAccount === "savings") {
+    document.querySelector(".saving-balance").style.backgroundColor = "yellow";
+  } else if (transactionAccount === "credit-card") {
+    document.querySelector(".credit-balance").style.backgroundColor = "yellow";
+  }
 }
 
 // allows both buttons to show the account modifying screen
