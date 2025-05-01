@@ -46,10 +46,48 @@ submitBtn.addEventListener("click", function () {
     firstName.value === "" ||
     lastName.value === "" ||
     salary.value === "" ||
-    creditScore === ""
+    creditScore.value === "" ||
+    creditScore.value === 0 ||
+    creditScore.value === null
   ) {
-    alert("Please fill in all fields");
-    return;
+    alert("Please fill in the following fields: ");
+    if (firstName.value === "") {
+      alert("please enter your First Name");
+      // changes the color of the first name input field to red
+      firstName.style.borderColor = "red";
+    }
+
+    if (lastName.value === "") {
+      alert("please enter your Last Name");
+      // changes the color of the last name input field to red
+      lastName.style.borderColor = "red";
+    }
+    if (salary.value === "") {
+      alert("please enter your Salary Amount");
+      // changes the color of the salary input field to red
+      salary.style.borderColor = "red";
+    }
+    if (creditScore === "") {
+      alert("please enter your Credit Score");
+      // changes the color of the credit score input field to red
+      creditScore.style.borderColor = "red";
+    } else {
+      // changes the color of the first name input field to green
+      firstName.style.borderColor = "green";
+      firstName.style.borderWidth = "5px";
+
+      // changes the color of the last name input field to green
+      lastName.style.borderColor = "green";
+      firstName.style.borderWidth = "5px";
+
+      // changes the color of the salary input field to green
+      salary.style.borderColor = "green";
+      firstName.style.borderWidth = "5px";
+
+      // changes the color of the credit score input field to green
+      creditScore.style.borderColor = "green";
+      firstName.style.borderWidth = "5px";
+    }
   }
 
   // Parse and validate salary
@@ -61,7 +99,7 @@ submitBtn.addEventListener("click", function () {
 
   // Validate credit score range
 
-  let creditScoreValue = parseInt(creditScore.value);
+  let creditScoreValue = parseInt(creditScore);
   if (creditScoreValue < 300 || creditScoreValue > 850) {
     alert("Credit score must be between 300 and 850");
     return;
@@ -78,6 +116,8 @@ submitBtn.addEventListener("click", function () {
   localStorage.setItem("Credit Score", JSON.stringify(creditScoreValue));
   localStorage.setItem("firstName", firstName.value);
   localStorage.setItem("lastName", lastName.value);
+
+  console.log(creditScore);
 
   // opening the credit result page
   window.location.href = "creditResults.html";

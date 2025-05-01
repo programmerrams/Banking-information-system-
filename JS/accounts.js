@@ -19,6 +19,9 @@ let creditCardBalance = parseFloat(
   document.querySelector(".credit-balance").innerHTML
 );
 
+let accountTypeDOM = document.querySelector(".account-type");
+console.log(accountTypeDOM[3].value);
+
 console.log;
 
 let accountActionsDOM = document.querySelector(".bank-action");
@@ -38,7 +41,24 @@ function performingWithdrawFunction() {
   transactiontype = "withdraw";
   console.log(transactiontype);
   accountActionsDOM.textContent = `you are currently making a ${transactiontype}.`;
-  window.scrollTo(0, document.body.scrollHeight, behavior = "smooth", duration = 200000);
+  window.scrollTo(
+    0,
+    document.body.scrollHeight,
+    (behavior = "smooth"),
+    (duration = 200000)
+  );
+
+  // gets rid of any highlighted background color
+  document.querySelector(".checking-balance").style.backgroundColor = "";
+  document.querySelector(".saving-balance").style.backgroundColor = "";
+  document.querySelector(".credit-balance").style.backgroundColor = "";
+  // scrolls down to the bottom of the page smoothly
+  window.scrollTo(
+    0,
+    document.body.scrollHeight,
+    (behavior = "smooth"),
+    (duration = 20000)
+  );
 }
 
 function performingDepositFunction() {
@@ -47,16 +67,34 @@ function performingDepositFunction() {
   console.log(transactiontype);
   accountActionsDOM.textContent = `you are currently making a ${transactiontype}.`;
   // scrolls down to the bottom of the page smoothly
-  window.scrollTo(0, document.body.scrollHeight, behavior = "smooth",duration = 20000);
+  window.scrollTo(
+    0,
+    document.body.scrollHeight,
+    (behavior = "smooth"),
+    (duration = 20000)
+  );
+  // gets rid of any highlighted background color
+  document.querySelector(".checking-balance").style.backgroundColor = "";
+  document.querySelector(".saving-balance").style.backgroundColor = "";
+  document.querySelector(".credit-balance").style.backgroundColor = "";
 }
 
 function payingcreditCardFunction() {
   AccountSettingsDOM.style.display = "block";
-  transactiontype = "credit card payment";
+  transactiontype = "credit card";
   console.log(transactiontype);
   accountActionsDOM.textContent = `you are currently making a ${transactiontype}.`;
   // scrolls down to the bottom of the page smoothly
-  window.scrollTo(0, document.body.scrollHeight, behavior = "smooth", duration = 20000);
+  window.scrollTo(
+    0,
+    document.body.scrollHeight,
+    (behavior = "smooth"),
+    (duration = 20000)
+  );
+  // gets rid of any highlighted background color
+  document.querySelector(".checking-balance").style.backgroundColor = "";
+  document.querySelector(".saving-balance").style.backgroundColor = "";
+  document.querySelector(".credit-balance").style.backgroundColor = "";
 }
 
 // hiding the account modifying screen
@@ -84,6 +122,8 @@ function executeTransaction() {
     console.log(savingsAccount);
   } else if (transactionAccount === "credit-card") {
     affectedAccount = creditCardBalance;
+    // credit card type is already selected
+    transactionAccount = "credit-card";
     console.log(affectedAccount);
     console.log(creditCardBalance);
   } else {
@@ -134,18 +174,34 @@ function executeTransaction() {
       document.querySelector(".credit-balance").innerHTML = creditCardBalance;
     }
   }
-  if (transactiontype === "credit card payment") {
+  if (transactiontype === "credit card") {
+    // selects the credit card option in the selected elment
+    transactionAccount = "credit-card";
+
     if (transactionAmount > affectedAccount) {
       console.log("your credit card payment is too high");
-      return alert("your credit card payment is too high");
+      alert("your credit card payment is too high");
+      // scrolls back to the top of the page
+      window.scrollTo(0, 0);
+      // hides the account modifying screen
+      AccountSettingsDOM.style.display = "none";
     } else {
       affectedAccount -= transactionAmount;
       // Update the displayed balance
       creditCardBalance = affectedAccount;
       document.querySelector(".credit-balance").innerHTML = creditCardBalance;
+      window.scrollTo(0, 200);
+      // hides the account modifying screen
+      AccountSettingsDOM.style.display = "none";
+
+      document.querySelector(".credit-balance").style.backgroundColor =
+        "yellow";
+      document.querySelector(".credit-balance").style.borderRadius = "10px";
+
       return alert(
         `Your credit card payment of $${transactionAmount} was successful! Your new balance is $${affectedAccount}.`
       );
+      // scrolls back to the top of the page
     }
   }
 
@@ -162,10 +218,14 @@ function executeTransaction() {
   if (transactionAccount === "checkings") {
     document.querySelector(".checking-balance").style.backgroundColor =
       "yellow";
+    document.querySelector(".checking-balance").style.borderRadius = "10px";
   } else if (transactionAccount === "savings") {
     document.querySelector(".saving-balance").style.backgroundColor = "yellow";
+    // changes border radius
+    document.querySelector(".saving-balance").style.borderRadius = "10px";
   } else if (transactionAccount === "credit-card") {
     document.querySelector(".credit-balance").style.backgroundColor = "yellow";
+    document.querySelector(".credit-balance").style.borderRadius = "10px";
   }
 }
 

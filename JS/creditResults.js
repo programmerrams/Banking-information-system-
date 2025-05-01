@@ -9,7 +9,7 @@ let userLastName = localStorage.getItem("lastName");
 let creditLimitAmount = localStorage.getItem("creditAmount");
 let creditScore = localStorage.getItem("creditScoreValue");
 
-let creditscore = Number(localStorage.getItem("Credit Score"));
+let creditscore = Number(localStorage.getItem("CreditScoreValue"));
 
 let yesButtonDOM = document.querySelector(".yes-Button");
 let noButtonDOM = document.querySelector(".no-Button");
@@ -20,6 +20,11 @@ if (creditscore >= 600) {
   bankStatementDOM.textContent = `hello ${userFirstName} ${userLastName}, after careful consideration your credit card limit is $${creditLimitAmount}.`;
 } else {
   bankStatementDOM.textContent = `hello ${userFirstName} ${userLastName}, after careful consideration you are not qualified for a credit card.`;
+
+  // disables the yes button if the user is not qualified for a credit card
+  yesButtonDOM.disabled = true;
+  yesButtonDOM.style.backgroundColor = "gray";
+  yesButtonDOM.style.cursor = "not-allowed";
 }
 
 function creditNumberGenerator() {
@@ -41,6 +46,10 @@ yesButtonDOM.addEventListener("click", function () {
   let creditCardNumber = creditNumberGenerator();
   console.log(`Your credit card number is: ${creditCardNumber}`);
   localStorage.setItem("creditCardNumber", creditCardNumber);
+
+  console.log(creditscore);
+  console.log(creditScore);
+  console.log("this works");
 
   // showing credit card number on page
   clientCreditNumberDOM.textContent = `Your credit card number is: ${creditCardNumber}`;
