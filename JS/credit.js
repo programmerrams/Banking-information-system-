@@ -1,4 +1,4 @@
-"strict mode";
+"use strict";
 
 // declaring all variables and assigning them to the respective elements
 
@@ -10,7 +10,7 @@ let lastName = document.querySelector(".lastName");
 
 let salary = document.querySelector(".salary-amount");
 
-let creditScore = document.querySelector(".credit-score");
+// Removed global creditScore assignment
 
 let submitBtn = document.querySelector(".submit-btn");
 
@@ -37,18 +37,18 @@ lastName.addEventListener("input", function () {
 });
 
 submitBtn.addEventListener("click", function () {
-  // lets the form go to another page after submission
-  // submissionForm.action = "creditResults.html";
-  // submissionForm.preventDefault();
+  // Get the current credit score value from the input element
+  let creditScoreInput = document.querySelector(".credit-score");
+  let creditScoreValue = Number(creditScoreInput.value);
 
   // Validate all fields are filled
   if (
     firstName.value === "" ||
     lastName.value === "" ||
     salary.value === "" ||
-    creditScore.value === "" ||
-    creditScore.value === 0 ||
-    creditScore.value === null
+    creditScoreInput.value === "" ||
+    creditScoreValue === 0 ||
+    creditScoreValue === null
   ) {
     alert("Please fill in the following fields: ");
     if (firstName.value === "") {
@@ -67,10 +67,10 @@ submitBtn.addEventListener("click", function () {
       // changes the color of the salary input field to red
       salary.style.borderColor = "red";
     }
-    if (creditScore === "") {
+    if (creditScoreInput.value === "") {
       alert("please enter your Credit Score");
       // changes the color of the credit score input field to red
-      creditScore.style.borderColor = "red";
+      creditScoreInput.style.borderColor = "red";
     } else {
       // changes the color of the first name input field to green
       firstName.style.borderColor = "green";
@@ -78,16 +78,17 @@ submitBtn.addEventListener("click", function () {
 
       // changes the color of the last name input field to green
       lastName.style.borderColor = "green";
-      firstName.style.borderWidth = "5px";
+      lastName.style.borderWidth = "5px";
 
       // changes the color of the salary input field to green
       salary.style.borderColor = "green";
-      firstName.style.borderWidth = "5px";
+      salary.style.borderWidth = "5px";
 
       // changes the color of the credit score input field to green
-      creditScore.style.borderColor = "green";
-      firstName.style.borderWidth = "5px";
+      creditScoreInput.style.borderColor = "green";
+      creditScoreInput.style.borderWidth = "5px";
     }
+    return; // Stop further execution if validation fails
   }
 
   // Parse and validate salary
@@ -98,8 +99,6 @@ submitBtn.addEventListener("click", function () {
   }
 
   // Validate credit score range
-
-  let creditScoreValue = parseInt(creditScore);
   if (creditScoreValue < 300 || creditScoreValue > 850) {
     alert("Credit score must be between 300 and 850");
     return;
@@ -117,7 +116,7 @@ submitBtn.addEventListener("click", function () {
   localStorage.setItem("firstName", firstName.value);
   localStorage.setItem("lastName", lastName.value);
 
-  console.log(creditScore);
+  console.log(creditScoreValue);
 
   // opening the credit result page
   window.location.href = "creditResults.html";
