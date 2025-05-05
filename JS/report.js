@@ -101,7 +101,7 @@ function generateReport() {
     const table = document.createElement("table");
     const headerRow = document.createElement("tr");
 
-    const headers = ["First Name", "Last Name", "credit card number", "Amount"];
+    const headers = ["First Name", "Last Name", "Credit Card Number", "Balance"];
 
     headers.forEach((header) => {
       const th = document.createElement("th");
