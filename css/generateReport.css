@@ -5,6 +5,10 @@
   margin: 2rem;
 }
 
+body {
+  opacity: 0.1;
+}
+
 td,
 th {
   padding: 1rem 2rem;
