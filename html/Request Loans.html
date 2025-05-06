@@ -1,128 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Request Loans</title>
-    <link rel="stylesheet" href="../css/Request Loans.css" />
-    <link rel="stylesheet" href="../css/Navigation.css" />
-  </head>
 
-  <body>
-    <nav class="nav-menu">
-      <ul class="nav-list">
-        <li><a href="Index.html">Home</a></li>
-        <li><a href="Request Loans.html" class="active">Request Loans</a></li>
-        <li><a href="Credit Card Page.html">Apply for a Credit Card</a></li>
-        <li><a href="Accounts.html">Manage accounts</a></li>
-        <li class="login"><a href="Log In Page.html">Login</a></li>
-        <li class="register"><a href="generateReport.html">Reports</a></li>
-      </ul>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request Loans</title>
+  <link rel="stylesheet" href="../css/Request Loans.css" />
+  <link rel="stylesheet" href="../css/Navigation.css" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">Flag Bank</a>
+    <nav class="header-navbar">
+      <a href="Request Loans.html" class="active">Request Loans</a>
+      <a href="Credit Card Page.html">Apply for a Credit Card</a>
+      <a href="Accounts.html">Manage Accounts</a>
+      <a href="generateReport.html">Reports</a>
     </nav>
+  </header>
 
+  <main>
     <h1>Request Loans</h1>
-    <header>
-      <section class="loan-app">
-        <label for="qone">How much money do you need?</label><br />
-        <input
-          type="text"
-          id="qone"
-          name="qone"
-          class="loan-amount"
-          placeholder="$5000"
-        /><br />
+    <section class="loan-app">
+      <label for="qone">How much money do you need?</label><br />
+      <input type="text" id="qone" name="qone" class="loan-amount" placeholder="$5000" /><br />
 
-        <label>How long will you need this money for?</label>
-        <select name="loan-length" id="loan-length" class="loan-length">
-          <option value="">select years</option>
-          <option value="one-year">1 year</option>
-          <option value="five-years">5 years</option>
-          <option value="ten-years">10 years</option>
-          <option value="fifteen-years">15 years</option>
-          <option value="twenty-years">20 years</option>
-          <option value="thirty-years">30 years</option>
-        </select>
+      <label for="loan-length">How long will you need this money for?</label>
+      <select name="loan-length" id="loan-length" class="loan-length">
+        <option value="">Select years</option>
+        <option value="one-year">1 year</option>
+        <option value="five-years">5 years</option>
+        <option value="ten-years">10 years</option>
+        <option value="fifteen-years">15 years</option>
+        <option value="twenty-years">20 years</option>
+        <option value="thirty-years">30 years</option>
+      </select>
 
-        <p>Reason for loan</p>
-        <figure class="reason-box">
-          <div class="radio-grouped">
-            <input
-              type="radio"
-              id="car"
-              name="reason"
-              value="car"
-              class="reason"
-            /><label for="car">Car</label><br />
-          </div>
-          <div class="radio-grouped">
-            <input
-              type="radio"
-              id="home"
-              name="reason"
-              value="home"
-              class="reason"
-            /><label for="home">home</label><br />
-          </div>
-          <div class="radio-grouped">
-            <input
-              type="radio"
-              id="business venture "
-              name="reason"
-              value="business venture"
-              class="reason"
-            /><label for="business venture">business venture</label>
-          </div>
-          <div class="radio-grouped">
-            <input
-              type="radio"
-              id="student loan"
-              name="reason"
-              value="student-loan"
-              class="reason"
-            /><label for="student-loan">student loan</label>
-          </div>
-          <div class="radio-grouped">
-            <input
-              type="radio"
-              id="personal loan"
-              name="reason"
-              value="business venture"
-              class="reason"
-            /><label for="personal loan">personal loan</label>
-          </div>
-        </figure>
-        <br />
-        <br />
-        <p>
-          Credit Score:<br />
-          The minimum credit score is 600 or higher.<br />
-          The interest rate will be 20%.<br />
-          The lower the credit score, the higher the interest rate.
-        </p>
-        <button class="submit">submit</button>
-      </section>
+      <p>Reason for loan</p>
+      <figure class="reason-box">
+        <div class="radio-grouped">
+          <input type="radio" id="car" name="reason" value="car" class="reason" />
+          <label for="car">Car</label><br />
+        </div>
+        <div class="radio-grouped">
+          <input type="radio" id="home" name="reason" value="home" class="reason" />
+          <label for="home">Home</label><br />
+        </div>
+        <div class="radio-grouped">
+          <input type="radio" id="business-venture" name="reason" value="business-venture" class="reason" />
+          <label for="business-venture">Business Venture</label>
+        </div>
+        <div class="radio-grouped">
+          <input type="radio" id="student-loan" name="reason" value="student-loan" class="reason" />
+          <label for="student-loan">Student Loan</label>
+        </div>
+        <div class="radio-grouped">
+          <input type="radio" id="personal-loan" name="reason" value="personal-loan" class="reason" />
+          <label for="personal-loan">Personal Loan</label>
+        </div>
+      </figure>
+      <br />
+      <p>
+        Credit Score:<br />
+        The minimum credit score is 600 or higher.<br />
+        The interest rate will be 20%.<br />
+        The lower the credit score, the higher the interest rate.
+      </p>
+      <button class="submit">Submit</button>
+    </section>
 
-      <section class="application-results ">
-        <h2>Application Results</h2>
-        <p>Loan Amount: <span class="loan-amount-result"></span></p>
-        <p>Loan Length: <span class="loan-length-result"></span></p>
-        <p>Reason for Loan: <span class="reason-result"></span></p>
-        <p>Interest Rate: <span class="interest-rate"></span></p>
-        <p>Monthly Payment: <span class="monthly-payment"></span></p>
-      </section>
-    </header>
+    <section class="application-results">
+      <h2>Application Results</h2>
+      <p>Loan Amount: <span class="loan-amount-result"></span></p>
+      <p>Loan Length: <span class="loan-length-result"></span></p>
+      <p>Reason for Loan: <span class="reason-result"></span></p>
+      <p>Interest Rate: <span class="interest-rate"></span></p>
+      <p>Monthly Payment: <span class="monthly-payment"></span></p>
+    </section>
+  </main>
 
-    <footer>
-      <nav class="second-nav-menu">
-        <ul class="second-nav-list">
-          <li><a href="About Us.html">About Us</a></li>
-          <li><a href="Questions and Answers.html">Questions & Answers</a></li>
-          <li><a href="Mission Statement.html">Mission Statement</a></li>
-          <li><a href="Disclaimers.html">Disclaimers</a></li>
-          <li><a href="ratesAndFees.html">Rates & Fees</a></li>
-        </ul>
-      </nav>
-    </footer>
-    <script src="../js/loan.js"></script>
-  </body>
+  <footer class="footer">
+    <nav class="footer-navbar">
+      <a href="About Us.html">About Us</a>
+      <a href="Questions and Answers.html">Questions & Answers</a>
+      <a href="Mission Statement.html">Mission Statement</a>
+      <a href="Disclaimers.html">Disclaimers</a>
+      <a href="ratesAndFees.html">Rates & Fees</a>
+    </nav>
+  </footer>
+  <script src="../js/loan.js"></script>
+</body>
+
 </html>

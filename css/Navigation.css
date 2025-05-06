@@ -1,66 +1,145 @@
-/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
     background-color: #ffffff;
     font-size: 20px;
+    padding-top: 80px;
+    padding-bottom: 60px;
 }
 
-/* Navigation Bar Settings */
-.nav-list,
-.second-nav-list {
-    display: flex;
-    list-style-type: none;
-    overflow: hidden;
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
+/* Active Link */
+.active { 
+    text-shadow: rgb(217, 0, 255) 0px 5px 5px;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
 }
 
-.nav-list li,
-.second-nav-list li {
-    display: inline-flex;
-}
-
-.nav-list li a,
-.second-nav-list li a {
-    display: block;
+/* Logo */
+.logo {
+    font-size: 32px;
     color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    font-weight: 700;
+}
+
+.logo:hover {
+    color: rgb(0, 0, 0);
     transition: all 0.5s ease-in-out;
 }
 
-/* Moves the login and register to the right */
-.nav-list .login {
-    margin-left: auto;
+#Capa_1 {
+    width: 50px;
+    height: 50px;
+    stroke: rgb(212, 0, 255);
 }
 
-.nav-list li a:hover:not(.active),
-.second-nav-list li a:hover:not(.active) {
-    background-color: #f1f1f1;
-    color: black;
+#Capa_1:hover {
+    stroke: rgb(0, 0, 0);
+    transition: all 0.5s ease-in-out;
 }
 
-.active {
-    background-color: rgb(41, 165, 62);
+#Capa_1:active {
+    stroke: rgb(0, 0, 0);
+    transition: all 0.5s ease-in-out;
 }
 
-.second-nav-list {
+#active {
+    text-shadow: rgb(212, 0, 255) 0px 5px 5px;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
+}
+
+/* Header Navigation Bar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    background: seagreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 5px 5px 5px black;
+}
+
+.header-navbar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.header-navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+.header-navbar a:hover::before {
+    width: 100%;
+}
+
+/*Footer Navigation Bar*/
+.footer {
     position: fixed;
     bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    background: seagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-navbar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.footer-navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+.footer-navbar a:hover::before {
     width: 100%;
 }
 
 .gear-icon {
-    width: 100%;
-    height: 30px;
-    stroke: rgb(171, 167, 167);
+    width: 20px;
+    height: 20px;
+    stroke: rgb(255, 255, 255);
 }

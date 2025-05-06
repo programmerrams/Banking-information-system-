@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Change Rate and fees</title>
-  </head>
-  <body>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Rates and fees</title>
-      <link rel="stylesheet" href="../css/navigation.css" />
-      <link rel="stylesheet" href="../css/modifyRates.css" />
-    </head>
 
-    <nav class="nav-menu">
-      <ul class="nav-list">
-        <li><a href="Index.html" class="active">Home</a></li>
-        <li><a href="Request Loans.html">Request Loans</a></li>
-        <li><a href="Credit Card Page.html">Apply for a Credit Card</a></li>
-        <li><a href="Accounts.html">Manage accounts</a></li>
-        <li class="login"><a href="Log In Page.html">Login</a></li>
-        <li><a href="generateReport.html">Reports</a></li>
-      </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Change Rates and Fees</title>
+  <link rel="stylesheet" href="../css/navigation.css" />
+  <link rel="stylesheet" href="../css/modifyRates.css" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">Flag Bank</a>
+    <nav class="header-navbar">
+      <a href="Request Loans.html">Request Loans</a>
+      <a href="Credit Card Page.html">Apply for a Credit Card</a>
+      <a href="Accounts.html">Manage Accounts</a>
+      <a href="generateReport.html">Reports</a>
     </nav>
+  </header>
 
+  <main>
     <section class="Modify-section-description">
       <h1 class="info-title">Modify Rates and Fees</h1>
       <p class="figure-change">Change the rates and fees.</p>
@@ -32,50 +28,44 @@
 
     <section class="Stat-change">
       <div class="number-box">
-        <label for="">Change APR</label>
-        <input type="number" min="0" class="APR" placeholder="Enter new APR" />
+        <label for="apr">Change APR</label>
+        <input type="number" id="apr" min="0" class="APR" placeholder="Enter new APR" />
       </div>
       <div class="number-box">
-        <label for=""> Change Late fees</label>
-        <input
-          type="number"
-          min="0"
-          class="Late-fees"
-          placeholder="Enter new Late Fees"
-        />
+        <label for="late-fees">Change Late Fees</label>
+        <input type="number" id="late-fees" min="0" class="Late-fees" placeholder="Enter new Late Fees" />
       </div>
       <div class="number-box">
-        <label for=""> Change Overdraft fees</label>
-        <input
-          type="number"
-          min="0"
-          class="Overdraft-fees"
-          placeholder="Enter new Overdraft fees"
-        />
+        <label for="overdraft-fees">Change Overdraft Fees</label>
+        <input type="number" id="overdraft-fees" min="0" class="Overdraft-fees"
+          placeholder="Enter new Overdraft Fees" />
       </div>
     </section>
 
     <section class="submission-update">
-      <h1 class = "submit-title">Your changes have been saved</h1>
+      <h1 class="submit-title">Your changes have been saved</h1>
       <h1>New rates are the following:</h1>
       <p class="new-rates">APR: <span class="new-apr"></span></p>
-      <p class="new-rates">Late-fees: <span class="new-late-fees"></span></p>
-      <p class="new-rates">
-        Overdraft fees: <span class="new-overdraft-fees"></span>
-      </p>
+      <p class="new-rates">Late Fees: <span class="new-late-fees"></span></p>
+      <p class="new-rates">Overdraft Fees: <span class="new-overdraft-fees"></span></p>
     </section>
 
     <section class="button-section">
       <button class="submit-button">Submit</button>
     </section>
+  </main>
 
-    <ul class="second-nav-list">
-      <li><a href="About Us.html">About Us</a></li>
-      <li><a href="Questions and Answers.html">Questions & Answers</a></li>
-      <li><a href="Mission Statement.html">Mission Statement</a></li>
-      <li><a href="Disclaimers.html">Disclaimers</a></li>
-      <li><a href="ratesAndFees.html">Rates & Fees</a></li>
-    </ul>
-    <script src="../JS/changeRates.js"></script>
-  </body>
+  <footer class="footer">
+    <nav class="footer-navbar">
+      <a href="About Us.html">About Us</a>
+      <a href="Questions and Answers.html">Questions & Answers</a>
+      <a href="Mission Statement.html" class="active">Mission Statement</a>
+      <a href="Disclaimers.html">Disclaimers</a>
+      <a href="ratesAndFees.html">Rates & Fees</a>
+    </nav>
+  </footer>
+
+  <script src="../JS/changeRates.js"></script>
+</body>
+
 </html>
