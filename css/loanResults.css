@@ -1,0 +1,22 @@
+.loan-response-section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.loan-results {
+  display: block;
+  border-color: black;
+  border-style: solid;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  text-align: center;
+}
+
+.loan-results-list {
+    list-style-type: none;
+}

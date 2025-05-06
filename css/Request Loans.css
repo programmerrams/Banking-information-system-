@@ -1,16 +1,64 @@
+body {
+  justify-content: center;
+  text-align: center;
+}
+
+.loan-app {
+  display: block;
+  border-color: black;
+  border-style: solid;
+  width: max-content;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+}
+
+.radio-grouped {
+  display: inline-block;
+  padding: 10px;
+}
+
+.loan-length {
+  text-align: center;
+  border-radius: 25px;
+}
+
+.loan-length:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.loan-amount {
+  text-align: center;
+  border-radius: 25px;
+}
+
 h1 {
   color: red;
 }
 
 .reason-box {
-  display: flex;
-  gap: 10px;
+  display: block; /* Ensure all radio groups are contained */
+  text-align: center; /* Center-align the radio buttons */
 }
 
-.loan-app {
-  margin-left: 20px;
+.submit {
+  border-radius: 10px;
+  padding: 5px;
+  background-color: seagreen;
+  color: white;
+
 }
 
+.submit:hover {
+  background-color: darkgreen;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
 .application-results {
   display: none;
   height:50vh
