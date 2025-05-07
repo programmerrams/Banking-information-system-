@@ -32,7 +32,7 @@ if (creditscore >= 600) {
   yesButtonDOM.style.cursor = "not-allowed";
 } else {
   bankStatementDOM.textContent = `hello ${userFirstName} ${userLastName}, after careful consideration you are not qualified for a credit card.`;
-  console.log(creditscore)
+  console.log(creditscore);
 
   // disables the yes button if the user is not qualified for a credit card
 }
@@ -58,7 +58,6 @@ yesButtonDOM.addEventListener("click", function () {
   localStorage.setItem("creditCardNumber", creditCardNumber);
 
   console.log(creditscore);
-  console.log(creditScore);
   console.log("this works");
 
   // showing credit card number on page
