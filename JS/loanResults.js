@@ -33,4 +33,4 @@ loanAmountDOM.innerHTML = `loan amount: $${loanAmount}`;
 loanTermDOM.innerHTML = `loan years: ${loanYearsInt} years`;
 interestRateDOM.innerHTML = `your interest rate is ${interestRateNum}%`;
 reasonDOM.innerHTML = `Reason: ${reasonValue}`;
-monthlyPaymentDOM.innerHTML = `$${monthlyPaymentValue}`;
+monthlyPaymentDOM.innerHTML = `$${monthlyPaymentValue.toFixed(2)}`;

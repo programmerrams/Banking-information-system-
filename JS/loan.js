@@ -43,8 +43,8 @@ function calculateMonthlyPayment() {
     loanTermDOM.value == "" ||
     reasonRadioButtons.length === 0
   ) {
-    // tells the user the inputs fields they need to fill 
-    if (loanAmount.value === "") {
+    // tells the user the inputs fields they need to fill
+    if (loanAmountDOM.value === "") {
       alert("Please fill in the loan amount field");
     }
     if (loanTerm.value == "") {
@@ -53,7 +53,7 @@ function calculateMonthlyPayment() {
     if (reasonRadioButtons.length === 0) {
       alert("Please fill in the reason for the loan field");
     }
-    
+
     alert("Please fill in all fields");
     return;
   }
@@ -64,21 +64,27 @@ function calculateMonthlyPayment() {
   switch (loanTermDOM.value) {
     case "one-year":
       loanYears = 1;
+      localStorage.setItem("loanYearsNum", loanYears);
       break;
     case "five-years":
       loanYears = 5;
+      localStorage.setItem("loanYearsNum", loanYears);
       break;
     case "ten-years":
       loanYears = 10;
+      localStorage.setItem("loanYearsNum", loanYears);
       break;
     case "fifteen-years":
       loanYears = 15;
+      localStorage.setItem("loanYearsNum", loanYears);
       break;
     case "twenty-years":
       loanYears = 20;
+      localStorage.setItem("loanYearsNum", loanYears);
       break;
     case "thirty-years":
       loanYears = 30;
+      localStorage.setItem("loanYearsNum", loanYears);
       break;
     default:
       console.log("your code isn't working, please try again");
@@ -140,9 +146,9 @@ loanAmountDOM.addEventListener("input", function () {
 });
 
 // save the loan term to local storage
-loanTermDOM.addEventListener("input", function () {
-  localStorage.setItem("loanYearsNum", loanYears);
-});
+// loanTermDOM.addEventListener("change", function () {
+//   localStorage.setItem("loanTerm", loanTermDOM.value);
+// });
 
 // save the interest rate to local storage
 let interestRateString = localStorage.setItem("interestRate", interestRate);
