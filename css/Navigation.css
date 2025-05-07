@@ -15,11 +15,8 @@ body {
 }
 
 /* Active Link */
-.active { 
+.active {
     text-shadow: rgb(217, 0, 255) 0px 5px 5px;
-    transition-duration: 3s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
     transition: all 0.5s ease-in-out;
     text-transform: uppercase;
     color: yellow !important;
@@ -31,100 +28,64 @@ body {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 700;
+    transition: all 0.5s ease-in-out;
 }
 
 .logo:hover {
     color: rgb(0, 0, 0);
-    transition: all 0.5s ease-in-out;
 }
 
 #Capa_1 {
     width: 50px;
     height: 50px;
     stroke: rgb(212, 0, 255);
-}
-
-#Capa_1:hover {
-    stroke: rgb(0, 0, 0);
     transition: all 0.5s ease-in-out;
 }
 
-#Capa_1:active {
+#Capa_1:hover, #Capa_1:active {
     stroke: rgb(0, 0, 0);
-    transition: all 0.5s ease-in-out;
 }
 
 #active {
     text-shadow: rgb(212, 0, 255) 0px 5px 5px;
-    transition-duration: 3s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
     transition: all 0.5s ease-in-out;
     text-transform: uppercase;
 }
 
 /* Header Navigation Bar */
-.header {
+.header, .footer {
     position: fixed;
-    top: 0;
     left: 0;
     width: 100%;
     padding: 10px 100px;
     background: seagreen;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     z-index: 100;
+}
+
+.header {
+    top: 0;
+    justify-content: space-between;
     box-shadow: 5px 5px 5px black;
 }
 
-.header-navbar a {
-    position: relative;
-    font-size: 18px;
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 40px;
-}
-
-.header-navbar a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: white;
-    transition: .3s;
-}
-
-.header-navbar a:hover::before {
-    width: 100%;
-}
-
-/*Footer Navigation Bar*/
 .footer {
-    position: fixed;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 100px;
-    background: seagreen;
-    display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.footer-navbar a {
+.header-navbar a, .footer-navbar a {
     position: relative;
     font-size: 18px;
     color: white;
     font-weight: 500;
     text-decoration: none;
     margin-left: 40px;
+    transition: .3s;
 }
 
-.footer-navbar a::before {
+.header-navbar a::before, .footer-navbar a::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -135,7 +96,7 @@ body {
     transition: .3s;
 }
 
-.footer-navbar a:hover::before {
+.header-navbar a:hover::before, .footer-navbar a:hover::before {
     width: 100%;
 }
 
