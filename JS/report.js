@@ -1,11 +1,10 @@
 // if user clicks on the report link, a password is required to access the report page
-alert(
-  "Please enter the password to access the report page. If you do not have the password, please contact the network administrator."
-);
-
+// alert(
+//   "Please enter the password to access the report page. If you do not have the password, please contact the network administrator."
+// );
 
 // intializing the report button
-const reportButtonDOM = document.querySelector(".report-btn");
+const reportDetailButtonDOM = document.querySelector(".report-btn");
 
 // intializing the body
 const body = document.querySelector("body");
@@ -13,7 +12,7 @@ const body = document.querySelector("body");
 // intializing the report table
 const reportTableDOM = document.querySelector(".table-display");
 
-function generateReport() {
+function generateDetailReport() {
   // creating an array of first names
   const firstNames = [
     "John",
@@ -68,12 +67,12 @@ function generateReport() {
     // generates a random four digit number
     return `****-****-****-${Math.floor(Math.random() * 9000) + 999}`;
   };
-  
+
   const maskedCreditCardNumber = (number) => {
     // masks the credit card number with X's
     return number.toString().replace(/\d(?=\d{4})/g, "X");
   };
-  
+
   const randomFirstName = () => {
     // generates a random first name
     return firstNames[Math.floor(Math.random() * firstNames.length)];
@@ -82,40 +81,48 @@ function generateReport() {
     // generates a random last name
     return lastNames[Math.floor(Math.random() * lastNames.length)];
   };
-  
+
   // generating random dollar amounts
   const randomDollarAmount = () => {
     // generates a random dollar amount
     return `$${Math.floor(Math.random() * 9000) + 999}`;
   };
-  
+
   console.log("generating report...");
-  
+
   // shows that the random values are generated
   console.log(randomFirstName());
   console.log(randomLastName());
   console.log(fakeMaskedCreditCardNumber());
   console.log(randomDollarAmount());
-  
-  //  creating a h1 title for the table
-  const title = document.createElement("h1");
-  title.textContent = "Credit Card Report Table";
-  title.classList.add("report-title");
-  // appending the title to the report table
-  reportTableDOM.appendChild(title);
+
+ 
 
   // creates table with four headers
   const createTable = () => {
     const table = document.createElement("table");
     const headerRow = document.createElement("tr");
-    
+    const titleheaderRow = document.createElement("tr").textContent = "Credit Card Report Table";
+
+
+    // creating an h1 title for the table
+    const title = document.createElement("h1");
+    title.textContent = "Credit Card Report Table";
+    // center the title
+    title.style.textAlign = "center";
+    title.classList.add("report-title");
+    // appending the title to the report table
+    reportTableDOM.appendChild(title);
+
     const headers = [
       "First Name",
       "Last Name",
       "Credit Card Number",
       "Balance",
     ];
-    
+
+    table.appendChild(title);
+
     headers.forEach((header) => {
       const th = document.createElement("th");
       th.textContent = header;
@@ -126,25 +133,25 @@ function generateReport() {
     reportTableDOM.innerHTML = "";
     reportTableDOM.appendChild(table);
     // generating 10 rows of data
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 20; i++) {
       const row = document.createElement("tr");
       const firstName = document.createElement("td");
       const lastName = document.createElement("td");
       const creditCardNumber = document.createElement("td");
       const amount = document.createElement("td");
-      
+
       firstName.textContent = randomFirstName();
       lastName.textContent = randomLastName();
       creditCardNumber.textContent = fakeMaskedCreditCardNumber();
       amount.textContent = randomDollarAmount();
-      
+
       row.appendChild(firstName);
       row.appendChild(lastName);
       row.appendChild(creditCardNumber);
       row.appendChild(amount);
 
       table.appendChild(row);
-      
+
       // sorting amounts from smallest to largest
       const rows = Array.from(table.querySelectorAll("tr")).slice(1);
       rows.sort((a, b) => {
@@ -155,20 +162,22 @@ function generateReport() {
       rows.forEach((row) => table.appendChild(row));
     }
   };
-  
+
   createTable();
 }
 
 // adding eventlistener to the report button
-reportButtonDOM.addEventListener("click", generateReport);
+reportDetailButtonDOM.addEventListener("click", generateDetailReport);
 
-let correctPassword = "manager123"; // The correct password
-let Userpassword = prompt("Enter the password:");
-if (Userpassword === correctPassword) {
-  console.log("Access granted! You can now view the report page.");
-  // change the opacity of the report button to 1
-  body.style.opacity = "1";
-} else {
-  alert("Incorrect password. You cannot access the report page.");
-  window.location.href = "../html/index.html"; // Redirect to the home page
-}
+
+// // must enter the password to access the report page.
+// let correctPassword = "manager123"; // The correct password
+// let Userpassword = prompt("Enter the password:");
+// if (Userpassword === correctPassword) {
+//   console.log("Access granted! You can now view the report page.");
+//   // change the opacity of the report button to 1
+//   body.style.opacity = "1";
+// } else {
+//   alert("Incorrect password. You cannot access the report page.");
+//   window.location.href = "../html/index.html"; // Redirect to the home page
+// }
