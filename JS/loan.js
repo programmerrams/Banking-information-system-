@@ -1,10 +1,10 @@
 "use strict";
 // declaring variables
 
-let loanAmount = document.querySelector(".loan-amount");
+let loanAmountDOM = document.querySelector(".loan-amount");
 let interestRate = 20;
 
-let loanTerm = document.querySelector(".loan-length");
+let loanTermDOM = document.querySelector(".loan-length");
 let loanYears = 1;
 
 // declaring the button
@@ -39,8 +39,8 @@ function calculateMonthlyPayment() {
 
   // Validate all fields are filled
   if (
-    loanAmount.value === "" ||
-    loanTerm.value == "" ||
+    loanAmountDOM.value === "" ||
+    loanTermDOM.value == "" ||
     reasonRadioButtons.length === 0
   ) {
     // tells the user the inputs fields they need to fill 
@@ -61,7 +61,7 @@ function calculateMonthlyPayment() {
   console.log(reasonRadioButtons);
 
   // Switch statement to determine the loan term in years
-  switch (loanTerm.value) {
+  switch (loanTermDOM.value) {
     case "one-year":
       loanYears = 1;
       break;
@@ -85,7 +85,7 @@ function calculateMonthlyPayment() {
       break;
   }
 
-  let loanAmountValue = parseFloat(loanAmount.value);
+  let loanAmountValue = parseFloat(loanAmountDOM.value);
 
   let monthlyPayment = calculateLoanPayment(
     loanAmountValue,
@@ -135,17 +135,17 @@ function calculateMonthlyPayment() {
 submitButton.addEventListener("click", calculateMonthlyPayment);
 
 // save the loan amount to local storage
-loanAmount.addEventListener("input", function () {
-  localStorage.setItem("loanAmount", loanAmount.value);
+loanAmountDOM.addEventListener("input", function () {
+  localStorage.setItem("loanAmount", loanAmountDOM.value);
 });
 
 // save the loan term to local storage
-loanTerm.addEventListener("input", function () {
-  localStorage.setItem("loanTerm", loanTerm.value);
+loanTermDOM.addEventListener("input", function () {
+  localStorage.setItem("loanYearsNum", loanYears);
 });
 
 // save the interest rate to local storage
-let interestRateString = localStorage.getItem("interestRate");
+let interestRateString = localStorage.setItem("interestRate", interestRate);
 
 // save the reason for the loan to local storage
 
