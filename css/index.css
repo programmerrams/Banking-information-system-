@@ -1,6 +1,3 @@
-/*****************************************************
-  Bank Information Section
-******************************************************/
 .first-statement {
   position: absolute;
   top: 50%;
@@ -20,23 +17,73 @@
 }
 
 .info-boxes {
-  display: inline-block;
-  position: relative;
-  background-color: seagreen;
-  border: 4px solid black;
-  border-radius: 25px;
+  display: flex;
+}
+
+.loan-text,
+.credit-text,
+.banking-text {
   width: 50%;
-  height: 300px;
-  padding: 50px;
-  margin: 50px;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.loan-text {
+  text-shadow: 2px 2px 4px #ffee00;
+}
+
+.credit-text {
+  text-shadow: 2px 2px 4px #0ad6fa;
+}
+
+.banking-text {
+  text-shadow: 2px 2px 4px #ff00a8;
+}
+
+.banking-link:hover,
+.credit-link:hover,
+.loan-link:hover {
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.banking-link:hover {
+  text-shadow: 2px 2px 4px #ff00a8;
+}
+
+.credit-link:hover {
+  text-shadow: 2px 2px 4px #0ad6fa;
+}
+
+.loan-link:hover {
+  text-shadow: 2px 2px 4px #ffee00;
+}
+
+.loan-image,
+.credit-card-image,
+.online-banking-text-image {
+  border: 3px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 .loan-image {
-  width: 50%;
-  height: 100%;
-  margin-bottom: 300px;
-  border-radius: 25px;
-  border: 4px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: fit-content;
+  height: fit-content;
+}
+
+.credit-card-image {
+  width: 29%;
+  height: 30%;
+}
+
+.online-banking-text-image {
+  width: 34.6%;
+  height: 30%;
+  margin-right: 15%;
 }
