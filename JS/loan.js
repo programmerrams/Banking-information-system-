@@ -47,7 +47,7 @@ function calculateMonthlyPayment() {
     if (loanAmountDOM.value === "") {
       alert("Please fill in the loan amount field");
     }
-    if (loanTerm.value == "") {
+    if (loanTermDOM.value == "") {
       alert("Please fill in the loan term field");
     }
     if (reasonRadioButtons.length === 0) {
