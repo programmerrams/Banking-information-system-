@@ -106,7 +106,7 @@ function generateDetailReport() {
 
     // creating an h1 title for the table
     const title = document.createElement("h1");
-    title.textContent = "Credit Card Report Table";
+    title.textContent = "Credit Card Detail Report Table";
     // center the title
     title.style.textAlign = "center";
     title.classList.add("report-title");
