@@ -19,6 +19,8 @@
 
 .info-boxes {
   display: flex;
+  justify-self: center;
+  align-items: center;
 }
 
 .loan-text,
