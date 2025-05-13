@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit results</title>
+    <link rel="stylesheet" href="../css/creditResults.css" />
+    <link rel="stylesheet" href="../css/Navigation.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Credit results</title>
-  <link rel="stylesheet" href="../css/creditResults.css">
-  <link rel="stylesheet" href="../css/Navigation.css">
-</head>
+  <header class="header">
+    <a href="index.html" class="logo">Flag Bank</a>
+    <nav class="header-navbar">
+      <a href="Request Loans.html">Request Loans</a>
+      <a href="Credit Card Page.html">Apply for a Credit Card</a>
+      <a href="Accounts.html" class="active">Manage Accounts</a>
+      <a href="generateReport.html">Reports</a>
+    </nav>
+  </header>
 
-<body>
-  <h1 class="title">Thank you for applying for a credit card!</h1>
-  <p class="credit-statement"> Your credit card application has been submitted. You will receive an email with the
-    results of your application within 24 hours.
-  </p>
+  <body>
+    <h1 class="title">Thank you for applying for a credit card!</h1>
+    <p class="credit-statement">
+      Your credit card application has been submitted. You will receive an email
+      with the results of your application within 24 hours.
+    </p>
 
-  <section class = "user-question">
-    <h1 class = "question"> would you like to open this credit card account?</h1>
-    
-    <button class = "yes-Button">yes</button>
-    <button class = "no-Button">no</button>
-  </section>
+    <section class="user-question">
+      <h1 class="question">would you like to open this credit card account?</h1>
 
-  <p class="thanks-statment">Thank you for banking with Flag Bank</p>
+      <button class="yes-Button">yes</button>
+      <button class="no-Button">no</button>
+    </section>
 
-  <p class = "user-creditNumber">Your credit card number is: <span class="clientCreditNumber"></span></p>
+    <p class="thanks-statment">Thank you for banking with Flag Bank</p>
 
-  <p class="contact-info">If you have any questions, please contact us at 1-800-555-5555 or visit our website at
-    www.flagbank.com</p>
-  <script src="../js/creditResults.js"></script>
-</body>
+    <p class="user-creditNumber">
+      Your credit card number is: <span class="clientCreditNumber"></span>
+    </p>
 
+    <p class="contact-info">
+      If you have any questions, please contact us at 1-800-555-5555 or visit
+      our website at www.flagbank.com
+    </p>
+    <footer class="footer">
+      <nav class="footer-navbar">
+        <a href="About Us.html">About Us</a>
+        <a href="Questions and Answers.html">Questions & Answers</a>
+        <a href="Mission Statement.html">Mission Statement</a>
+        <a href="Disclaimers.html">Disclaimers</a>
+        <a href="ratesAndFees.html">Rates & Fees</a>
+      </nav>
+    </footer>
+    <script src="../js/creditResults.js"></script>
+  </body>
 </html>

@@ -61,7 +61,7 @@ yesButtonDOM.addEventListener("click", function () {
   console.log("this works");
 
   // showing credit card number on page
-  clientCreditNumberDOM.textContent = `Your credit card number is: ${creditCardNumber}`;
+  clientCreditNumberDOM.textContent = `${creditCardNumber}`;
   clientCreditNumberDOM.style.color = "green";
 });
 
