@@ -250,7 +250,7 @@ function generateSummaryReport() {
       th.textContent = firstName;
     });
 
-   lastNames.forEach((lastName) => {
+    lastNames.forEach((lastName) => {
       const th = document.createElement("th");
       th.textContent = lastName;
     });
@@ -269,7 +269,7 @@ function generateSummaryReport() {
     }
 
     table.appendChild(headerRow);
-    
+
     // generating 20 rows of data
     for (let i = 0; i < 10; i++) {
       const row = document.createElement("tr");
@@ -318,7 +318,7 @@ function generateSummaryReport() {
     const averageCheckingAccount = document.createElement("td");
     const averageSavingsAccount = document.createElement("td");
     const averageCreditCardNumber = document.createElement("td");
-   // calculating the average of the amounts
+    // calculating the average of the amounts
     const averageAmountValue = (
       Array.from(table.querySelectorAll("tr"))
         .slice(1)
@@ -346,10 +346,10 @@ function generateSummaryReport() {
             row.cells[5].textContent.replace("$", "")
           );
           return acc + savingsAccount;
-        }, 0) / 10).toFixed(2);
-    
-    // setting the text content of the last row to the average values
+        }, 0) / 10
+    ).toFixed(2);
 
+    // setting the text content of the last row to the average values
 
     firstName.textContent = "Calculating Average";
     lastName.textContent = "Calculating Average";
@@ -370,10 +370,9 @@ function generateSummaryReport() {
     lastRow.appendChild(savingsAccount);
     table.appendChild(lastRow);
 
-
     reportTableDOM.appendChild(title);
     reportTableDOM.appendChild(table);
-  }
+  };
   createTable();
 }
 
@@ -381,14 +380,14 @@ function generateSummaryReport() {
 reportDetailButtonDOM.addEventListener("click", generateDetailReport);
 reportSummaryButtonDOM.addEventListener("click", generateSummaryReport);
 
-// // must enter the password to access the report page.
-// let correctPassword = "manager123"; // The correct password
-// let Userpassword = prompt("Enter the password:");
-// if (Userpassword === correctPassword) {
-//   console.log("Access granted! You can now view the report page.");
-//   // change the opacity of the report button to 1
-//   body.style.opacity = "1";
-// } else {
-//   alert("Incorrect password. You cannot access the report page.");
-//   window.location.href = "../html/index.html"; // Redirect to the home page
-// }
+// must enter the password to access the report page.
+let correctPassword = "manager123"; // The correct password
+let Userpassword = prompt("Enter the password:");
+if (Userpassword === correctPassword) {
+  console.log("Access granted! You can now view the report page.");
+  // change the opacity of the report button to 1
+  body.style.opacity = "1";
+} else {
+  alert("Incorrect password. You cannot access the report page.");
+  window.location.href = "../html/index.html"; // Redirect to the home page
+}
